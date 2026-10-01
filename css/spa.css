@@ -2845,23 +2845,102 @@
 @media (max-width: 768px) {
   .areo-formula-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-3);
   }
 
   .areo-trainer-card {
-    padding: var(--space-5);
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
   }
 
   .areo-case-bar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: var(--space-3);
   }
 
+  .areo-case-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .areo-case-nav {
+    display: flex;
+    gap: var(--space-2);
+    width: 100%;
+  }
+
+  .areo-case-nav .btn {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .areo-resolution-box {
+    padding: var(--space-4);
+    margin: var(--space-4) 0;
+    gap: var(--space-3);
+  }
+
+  .areo-resolution-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .areo-resolution-text {
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  /* AREO 4 slots: comfortable vertical stack on mobile screens */
   .areo-slots-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-3);
+    width: 100%;
+  }
+
+  .areo-slot {
+    min-height: 100px;
+    padding: var(--space-3) var(--space-4);
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .areo-slot__empty-msg {
+    padding: var(--space-3) var(--space-2);
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-2);
+  }
+
+  .areo-slot-card {
+    padding: var(--space-3) var(--space-4);
+    min-height: 70px;
+  }
+
+  .areo-slot-card__text {
+    font-size: 0.88rem;
+    line-height: 1.5;
   }
 
   .areo-pool-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-3);
+    width: 100%;
+  }
+
+  .areo-pool-card {
+    padding: var(--space-3) var(--space-4);
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .areo-pool-card__text {
+    font-size: 0.88rem;
+    line-height: 1.5;
   }
 
   .mat-tools-grid {
@@ -2871,18 +2950,27 @@
   .areo-actions-bar {
     flex-direction: column;
     align-items: stretch;
+    gap: var(--space-3);
   }
 
   .areo-actions-left {
-    justify-content: stretch;
+    display: flex;
+    gap: var(--space-2);
+    width: 100%;
   }
 
   .areo-actions-left .btn {
     flex: 1;
+    justify-content: center;
+  }
+
+  .areo-actions-right {
+    width: 100%;
   }
 
   .areo-actions-right .btn {
     width: 100%;
+    justify-content: center;
   }
 
   .timer-presets-bar {

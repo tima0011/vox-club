@@ -598,7 +598,6 @@
       if (nextCaseBtn) nextCaseBtn.classList.add('is-hidden');
     }
   }
-  }
 
   function resetAreo() {
     loadAreoCase(areoState.currentCaseIndex);
