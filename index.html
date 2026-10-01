@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="VOX &mdash; школьный дебатный клуб. Развивай критическое мышление, ораторское мастерство и работай в формате World Schools Debate." />
+  <title>VOX &mdash; Школьный Дебатный Клуб</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/pages/home.css" />
+  <link rel="stylesheet" href="css/spa.css" />
+</head>
+
+<body>
+
+  <header class="nav-header" id="site-header" role="banner">
+    <nav class="nav-container" aria-label="Основная навигация">
+      <a href="#home" class="nav-logo" data-route="home" aria-label="VOX &mdash; Главная">
+        <span class="logo-mark">VOX</span>
+        <span class="logo-sub">Дебатный клуб</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#home" class="nav-link" data-route="home">Главная</a></li>
+        <li><a href="#program" class="nav-link" data-route="program">Программа</a></li>
+        <li><a href="#materials" class="nav-link" data-route="materials">Материалы</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#register" class="btn btn-primary btn-sm nav-cta" data-route="register">Записаться</a>
+        <button class="burger" id="burger-btn" aria-label="Открыть меню" aria-expanded="false"
+          aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Мобильное меню" hidden>
+      <ul class="mobile-nav-links" role="list">
+        <li><a href="#home" class="mobile-nav-link" data-route="home">Главная</a></li>
+        <li><a href="#program" class="mobile-nav-link" data-route="program">Программа</a></li>
+        <li><a href="#materials" class="mobile-nav-link" data-route="materials">Материалы</a></li>
+        <li><a href="#register" class="mobile-nav-link" data-route="register">Вступить</a></li>
+      </ul>
+      <a href="#register" class="btn btn-primary mobile-cta" data-route="register">Записаться в клуб</a>
+    </div>
+  </header>
+
+  <div id="app">
+
+    <main id="view-home" class="view view--active" data-view="home" aria-label="Главная">
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-bg-grid" aria-hidden="true"></div>
+        <div class="hero-orbs" aria-hidden="true">
+          <div class="orb orb--1"></div>
+          <div class="orb orb--2"></div>
+          <div class="orb orb--3"></div>
+        </div>
+        <div class="container hero-content">
+          <div class="hero-badge reveal" aria-label="World Schools Format">
+            <span class="badge-dot"></span>
+            World Schools Debate
+          </div>
+          <h1 class="hero-title reveal" id="hero-title">
+            Твой голос &mdash;<br />
+            <span class="gradient-text">твоя сила</span>
+          </h1>
+          <p class="hero-subtitle reveal">
+            VOX &mdash; место, где школьники учатся думать критически,
+            аргументировать убедительно и побеждать в дебатах
+            международного формата.
+          </p>
+          <div class="hero-actions reveal">
+            <a href="#register" class="btn btn-primary btn-lg" data-route="register">
+              <span>Вступить в клуб</span>
+              <svg class="btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="#program" class="btn btn-ghost btn-lg" data-route="program">Узнать больше</a>
+          </div>
+
+        </div>
+        <div class="hero-scroll-hint" aria-hidden="true">
+          <span>Прокрути вниз</span>
+          <div class="scroll-line"></div>
+        </div>
+      </section>
+
+      <section class="section section--alt" aria-labelledby="why-vox-title">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Наш подход</span>
+            <h2 class="section-title" id="why-vox-title">Почему VOX?</h2>
+            <p class="section-subtitle">Мы построили клуб так, чтобы каждый участник рос &mdash; не наблюдал со стороны.
+            </p>
+          </div>
+          <div class="cards-grid cards-grid--3 reveal-stagger">
+            <article class="card card--feature" id="card-involvement">
+              <div class="card-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <circle cx="14" cy="10" r="4" stroke="currentColor" stroke-width="1.5" />
+                  <circle cx="5" cy="20" r="3" stroke="currentColor" stroke-width="1.5" />
+                  <circle cx="14" cy="21" r="3" stroke="currentColor" stroke-width="1.5" />
+                  <circle cx="23" cy="20" r="3" stroke="currentColor" stroke-width="1.5" />
+                  <path d="M2 26c0-2 1.3-3 3-3M9 26c-.3-1.8.7-3 3-3M17 26c-.3-1.8.7-3 3-3M26 26c0-2-1.3-3-3-3"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg></div>
+              <h3 class="card-title">100% Вовлеченность</h3>
+              <p class="card-text">Никаких <strong>«скамеек запасных»</strong>. В традиционных клубах выступают 6
+                человек, пока остальные смотрят.</p>
+              <ul class="card-list">
+                <li>Дебатируют <strong>ВСЕ</strong> 30+ участников</li>
+                <li>3–4 параллельных зоны одновременно</li>
+                <li>Каждый &mdash; спикер, не зритель</li>
+              </ul>
+            </article>
+            <article class="card card--feature" id="card-dynamics">
+              <div class="card-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <path d="M4 22L10 14L16 18L22 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <circle cx="22" cy="8" r="2.5" stroke="currentColor" stroke-width="1.5" />
+                  <path d="M4 26h20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg></div>
+              <h3 class="card-title">Динамика и Практика</h3>
+              <p class="card-text">Упрощённый формат <strong>World Schools</strong>. Встреча длится всего 90 минут
+                &mdash; максимум практики, минимум теории.</p>
+              <ul class="card-list">
+                <li>Быстрая подготовка кейсов</li>
+                <li>Параллельные раунды</li>
+                <li>Фидбек от судей после каждого раунда</li>
+              </ul>
+            </article>
+            <article class="card card--feature" id="card-areo">
+              <div class="card-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <rect x="3" y="5" width="22" height="18" rx="2" stroke="currentColor" stroke-width="1.5" />
+                  <path d="M8 10h5M8 14h12M8 18h9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg></div>
+              <h3 class="card-title">Конструктор AREO</h3>
+              <p class="card-text">Учим строить <strong>железобетонную логику</strong> по единому стандарту, который
+                работает в любой дискуссии.</p>
+              <ul class="card-list">
+                <li><strong>A</strong>ssertion &mdash; тезис</li>
+                <li><strong>R</strong>easoning &mdash; объяснение</li>
+                <li><strong>E</strong>vidence &mdash; факты</li>
+                <li><strong>O</strong>utcome &mdash; вывод</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">О формате</span>
+            <h2 class="section-title" id="about-title">Что такое World Schools?</h2>
+            <p class="section-subtitle">Международный дебатный формат, используемый на олимпиадах и чемпионатах по всему
+              миру.</p>
+          </div>
+          <div class="cards-grid cards-grid--3 reveal-stagger">
+            <article class="card card--feature" id="card-structure">
+              <div class="card-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <rect x="3" y="3" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.5" />
+                  <rect x="15" y="3" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.5" />
+                  <rect x="3" y="15" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.5" />
+                  <rect x="15" y="15" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.5" />
+                </svg></div>
+              <h3 class="card-title">Структура раунда</h3>
+              <p class="card-text">Два блока: <strong>подготовленные</strong> и <strong>импровизационные</strong> темы.
+                3 спикера с каждой стороны, 8 минут на каждую речь.</p>
+              <ul class="card-list">
+                <li>1st, 2nd, 3rd Speaker</li>
+                <li>Points of Information (POI)</li>
+                <li>Reply Speech (4 мин.)</li>
+              </ul>
+            </article>
+            <article class="card card--feature" id="card-skills">
+              <div class="card-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <path d="M14 3L17.5 10.5L25.5 11.5L20 17L21.5 25L14 21L6.5 25L8 17L2.5 11.5L10.5 10.5L14 3Z"
+                    stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                </svg></div>
+              <h3 class="card-title">Навыки</h3>
+              <p class="card-text">Клуб развивает комплекс компетенций, востребованных в университете и карьере.</p>
+              <ul class="card-list">
+                <li>Критическое мышление</li>
+                <li>Публичная речь</li>
+                <li>Аргументация и рефутация</li>
+                <li>Работа в команде</li>
+              </ul>
+            </article>
+            <article class="card card--feature" id="card-judging">
+              <div class="card-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <path d="M5 14h18M5 8h18M5 20h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg></div>
+              <h3 class="card-title">Судейство</h3>
+              <p class="card-text">Команды оцениваются по трём критериям: <strong>Content</strong>,
+                <strong>Style</strong> и <strong>Strategy</strong>.
+              </p>
+              <ul class="card-list">
+                <li>Content &mdash; содержание (40 б.)</li>
+                <li>Style &mdash; подача (40 б.)</li>
+                <li>Strategy &mdash; стратегия (20 б.)</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" aria-labelledby="how-title">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Как это работает</span>
+            <h2 class="section-title" id="how-title">Твой путь в VOX</h2>
+          </div>
+          <div class="steps reveal-stagger">
+            <div class="step">
+              <div class="step-number" aria-hidden="true">01</div>
+              <div class="step-content">
+                <h3 class="step-title">Регистрация</h3>
+                <p class="step-text">Заполни форму онлайн — это занимает 2 минуты. Мы свяжемся с тобой в течение дня.
+                </p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number" aria-hidden="true">02</div>
+              <div class="step-content">
+                <h3 class="step-title">Вводное занятие</h3>
+                <p class="step-text">Познакомишься с форматом, командой и другими участниками. Никаких предварительных
+                  знаний не нужно.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number" aria-hidden="true">03</div>
+              <div class="step-content">
+                <h3 class="step-title">Тренировки и турниры</h3>
+                <p class="step-text">Еженедельные встречи по программе, mock debates и участие в школьных соревнованиях.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta-band reveal" aria-labelledby="cta-title">
+        <div class="container cta-band-inner">
+          <div class="cta-band-text">
+            <h2 class="cta-band-title" id="cta-title">Готов найти свой голос?</h2>
+            <p class="cta-band-subtitle">Новый набор открыт. Мест ограниченное количество.</p>
+          </div>
+          <div class="cta-band-actions">
+            <a href="#register" class="btn btn-primary btn-lg" data-route="register">Записаться сейчас</a>
+            <a href="#program" class="btn btn-outline btn-lg" data-route="program">Посмотреть программу</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <main id="view-program" class="view" data-view="program" aria-label="Программа" hidden>
+
+      <!-- View Hero -->
+      <div class="view-hero view-hero--program">
+        <div class="view-hero__bg" aria-hidden="true"></div>
+        <div class="container view-hero__content">
+          <span class="section-tag">Направления и формат</span>
+          <h1 class="view-hero__title" id="prog-modules-title">Программа клуба</h1>
+          <p class="view-hero__subtitle">Два направления развития: классические парламентские дебаты и дипломатическая Модель ООН. Живая практика каждую неделю.</p>
+        </div>
+      </div>
+
+      <!-- Tracks & Language Barrier Section -->
+      <section class="section program-tracks-section" aria-labelledby="prog-modules-title">
+        <div class="container">
+
+          <!-- Language Barrier Relief Callout Banner -->
+          <div class="lang-barrier-banner reveal" role="region" aria-label="Информация об уровне английского">
+            <div class="lang-barrier-badge-wrap">
+              <span class="lang-barrier-pill">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M8 1.5C4.41 1.5 1.5 4.19 1.5 7.5c0 1.54.63 2.95 1.68 4.02-.15.82-.48 1.83-1.12 2.57a.5.5 0 00.44.82c1.78-.07 3.09-.76 3.86-1.32.51.15 1.06.23 1.64.23 3.59 0 6.5-2.69 6.5-6s-2.91-6-6.5-6z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+                </svg>
+                English A2–B1+
+              </span>
+            </div>
+            <div class="lang-barrier-content">
+              <p class="lang-barrier-quote">
+                <strong>Не бойся говорить:</strong> мы ждем участников с любым уровнем английского (от A2&ndash;B1). Главное &mdash; желание думать и спорить, разговорный навык подтянется на практике.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2 Tracks Grid -->
+          <div class="program-tracks-grid reveal-stagger">
+
+            <!-- Track 1: World Schools Debates -->
+            <article class="card card--track" id="track-debates">
+              <div class="track-header">
+                <div class="track-icon" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                    <path d="M14 3a4 4 0 00-4 4v7a4 4 0 008 0V7a4 4 0 00-4-4z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                    <path d="M6 12v2a8 8 0 0016 0v-2M14 22v3M10 25h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="track-meta">
+                  <span class="track-badge">Трек 01 &middot; World Schools</span>
+                  <h2 class="card-title track-title">Дебаты (World Schools)</h2>
+                </div>
+              </div>
+
+              <p class="track-lead">
+                Учимся мыслить критически, быстро находить аргументы и уверенно выступать.
+              </p>
+
+              <!-- Formula callout -->
+              <div class="formula-box">
+                <span class="formula-box-label">Понятная формула речи:</span>
+                <div class="formula-flow" aria-label="Формула: Тезис переходит в Аргумент, Пример и Вывод">
+                  <span class="formula-node">Тезис</span>
+                  <span class="formula-arrow" aria-hidden="true">&rarr;</span>
+                  <span class="formula-node">Аргумент</span>
+                  <span class="formula-arrow" aria-hidden="true">&rarr;</span>
+                  <span class="formula-node">Пример</span>
+                  <span class="formula-arrow" aria-hidden="true">&rarr;</span>
+                  <span class="formula-node">Вывод</span>
+                </div>
+              </div>
+
+              <ul class="card-list track-skills-list">
+                <li>Учимся задавать точные вопросы оппонентам (POI) и держаться перед публикой</li>
+                <li>Быстрый анализ резолюций и парирование аргументов оппонентов</li>
+                <li>Командная работа: 3 спикера в раунде, распределение ролей и тайминг</li>
+              </ul>
+
+              <div class="track-footer">
+                <a href="#register?track=debates" class="btn btn-outline btn-md track-btn" data-route="register" data-track="debates">
+                  Выбрать дебаты
+                  <svg class="btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Track 2: MUN -->
+            <article class="card card--track" id="track-mun">
+              <div class="track-header">
+                <div class="track-icon track-icon--mun" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                    <circle cx="14" cy="14" r="10" stroke="currentColor" stroke-width="1.6"/>
+                    <path d="M4 14h20M14 4a14.5 14.5 0 010 20M14 4a14.5 14.5 0 000 20" stroke="currentColor" stroke-width="1.6"/>
+                  </svg>
+                </div>
+                <div class="track-meta">
+                  <span class="track-badge track-badge--mun">Трек 02 &middot; Дипломатия &amp; MUN</span>
+                  <h2 class="card-title track-title">Модель ООН (MUN)</h2>
+                </div>
+              </div>
+
+              <p class="track-lead">
+                Дипломатия, разбор мировых проблем, защита позиции выбранной страны и составление резолюций.
+              </p>
+
+              <!-- MUN Prep Box -->
+              <div class="mun-prep-box">
+                <div class="mun-prep-badge">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M8 2l1.8 3.8 4.2.6-3 3 .7 4.2L8 11.6 4.3 13.6l.7-4.2-3-3 4.2-.6L8 2z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+                  </svg>
+                  Практический фокус
+                </div>
+                <p class="mun-prep-text">
+                  Подготовка к участию в школьных и городских конференциях
+                </p>
+              </div>
+
+              <ul class="card-list track-skills-list">
+                <li>Разбор актуальных мировых проблем, дипломатический этикет и протокол</li>
+                <li>Защита интересов страны, построение коалиций и лоббирование поправок</li>
+                <li>Составление официальных резолюций и практика публичных выступлений</li>
+              </ul>
+
+              <div class="track-footer">
+                <a href="#register?track=mun" class="btn btn-outline btn-md track-btn" data-route="register" data-track="mun">
+                  Выбрать Модель ООН
+                  <svg class="btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 10-Week Roadmap Section -->
+      <section class="section section--alt prog-roadmap-section" id="prog-roadmap-section" aria-labelledby="prog-roadmap-title">
+        <div class="container">
+          <div class="section-header reveal">
+            <div class="roadmap-header-badges">
+              <span class="section-tag">Дорожная карта на 10 недель</span>
+              <div class="open-enrollment-badge">
+                <span class="pulse-dot-green" aria-hidden="true"></span>
+                <span>Открытый набор &middot; Присоединяйся в любой вторник</span>
+              </div>
+            </div>
+            <h2 class="section-title" id="prog-roadmap-title">Программа семестра</h2>
+            <p class="section-subtitle">
+              Пошаговый трек развития: от преодоления страха сцены до турнирных раундов на английском языке
+            </p>
+          </div>
+
+          <div class="roadmap-stages">
+
+            <!-- Stage 1 (Weeks 1–4) -->
+            <article class="roadmap-stage-card reveal">
+              <div class="roadmap-stage-header">
+                <div class="roadmap-stage-badge-group">
+                  <span class="roadmap-stage-badge">Этап 1</span>
+                  <span class="roadmap-stage-duration">Недели 1–4</span>
+                </div>
+                <h3 class="roadmap-stage-title">Базовый каркас и преодоление барьера</h3>
+                <p class="roadmap-stage-desc">
+                  Освоение фундаментальной структуры аргументации, избавление от страха публичного слова, постановка голоса и правила ведения цивилизованного спора.
+                </p>
+              </div>
+
+              <div class="roadmap-weeks-grid">
+                <!-- Week 1 (Current Week) -->
+                <div class="roadmap-week-card is-current">
+                  <div class="roadmap-week-head">
+                    <span class="roadmap-week-badge">Неделя 1</span>
+                    <span class="roadmap-week-current-badge">🔥 Текущая неделя</span>
+                  </div>
+                  <h4 class="roadmap-week-title">Анатомия аргумента (метод AREO)</h4>
+                  <p class="roadmap-week-desc">
+                    Разбор 4-частной структуры: Assertion (тезис), Reasoning (логическое объяснение), Evidence (факт или пример) и Outcome (влияние на раунд).
+                  </p>
+                  <div class="roadmap-week-practice">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M13.333 4L6 11.333 2.667 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Практика: построение 2-минутных речей AREO</span>
+                  </div>
+                </div>
+
+                <!-- Week 2 -->
+                <div class="roadmap-week-card">
+                  <div class="roadmap-week-head">
+                    <span class="roadmap-week-badge">Неделя 2</span>
+                    <span class="roadmap-week-indicator" aria-hidden="true"></span>
+                  </div>
+                  <h4 class="roadmap-week-title">Техника отбивки и контраргументации</h4>
+                  <p class="roadmap-week-desc">
+                    Методика деконструкции чужих доводов: поиск ложных связок в Reasoning, атака скрытых предпосылок и контраргументация по принципу «даже если».
+                  </p>
+                  <div class="roadmap-week-practice">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M13.333 4L6 11.333 2.667 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Практика: парные дуэли «Атака — Контратака»</span>
+                  </div>
+                </div>
+
+                <!-- Week 3 -->
+                <div class="roadmap-week-card">
+                  <div class="roadmap-week-head">
+                    <span class="roadmap-week-badge">Неделя 3</span>
+                    <span class="roadmap-week-indicator" aria-hidden="true"></span>
+                  </div>
+                  <h4 class="roadmap-week-title">Тайминг речи 3 минуты и 4 логические ошибки</h4>
+                  <p class="roadmap-week-desc">
+                    Тайм-менеджмент раунда и темп речи. Выявление и нейтрализация уловок: переход на личности (Ad Hominem), соломенное чучело (Straw Man), скользкая дорожка и ложная дилемма.
+                  </p>
+                  <div class="roadmap-week-practice">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M13.333 4L6 11.333 2.667 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Практика: спичи по секундомеру с ловлей ошибок</span>
+                  </div>
+                </div>
+
+                <!-- Week 4 -->
+                <div class="roadmap-week-card">
+                  <div class="roadmap-week-head">
+                    <span class="roadmap-week-badge">Неделя 4</span>
+                    <span class="roadmap-week-indicator" aria-hidden="true"></span>
+                  </div>
+                  <h4 class="roadmap-week-title">Механика вопросов POI в раунде</h4>
+                  <p class="roadmap-week-desc">
+                    Points of Information: подача и приём 15-секундных вопросов с места. Как сбивать темп оппонента, удержать фокус и парировать неудобные выпады.
+                  </p>
+                  <div class="roadmap-week-practice">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M13.333 4L6 11.333 2.667 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Практика: раунды под постоянным прессингом POI</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Stage 2 (Weeks 5–8) -->
+            <article class="roadmap-stage-card reveal">
+              <div class="roadmap-stage-header">
+                <div class="roadmap-stage-badge-group">
+                  <span class="roadmap-stage-badge">Этап 2</span>
+                  <span class="roadmap-stage-duration">Недели 5–8</span>
+                </div>
+                <h3 class="roadmap-stage-title">Разделение на лиги и дипломатия</h3>
+                <p class="roadmap-stage-desc">
+                  Переход к командным ролям международного формата WSDC и погружение в процедуры Модели ООН с коалициями, кулуарными переговорами и драфтингом.
+                </p>
+              </div>
+
+              <div class="roadmap-weeks-grid">
+                <!-- Week 5 -->
+                <div class="roadmap-week-card">
+                  <div class="roadmap-week-head">
+                    <span class="roadmap-week-badge">Неделя 5</span>
+                    <span class="roadmap-week-indicator" aria-hidden="true"></span>
+                  </div>
+                  <h4 class="roadmap-week-title">Формат World Schools (роли спикеров)</h4>
+                  <p class="roadmap-week-desc">
+                    Архитектура командного раунда 3x3: функции 1-го спикера (сеттинг и кейс), 2-го спикера (расширение) и 3-го спикера (анализ точек столкновения и финал).
+                  </p>
+                  <div class="roadmap-week-practice">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M13.333 4L6 11.333 2.667 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Практика: распределение ролей и командная тактика</span>
+                  </div>
+                </div>
+
+                <!-- Week 6 -->
+                <div class="roadmap-week-card">
+                  <div class="roadmap-week-head">
+                    <span class="roadmap-week-badge">Неделя 6</span>
+                    <span class="roadmap-week-indicator" aria-hidden="true"></span>
+                  </div>
+                  <h4 class="roadmap-week-title">Взвешивание аргументов (Weighing & Impact)</h4>
+                  <p class="roadmap-week-desc">
+                    Критерии судейского выбора при двух сильных кейсах. Сравнение масштаба (Scale), вероятности (Likelihood), необратимости и морального приоритета.
+                  </p>
+                  <div class="roadmap-week-practice">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M13.333 4L6 11.333 2.667 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Практика: судейский вердикт и защита импакта</span>
+                  </div>
+                </div>
+
+                <!-- Week 7 -->
+                <div class="roadmap-week-card">
+                  <div class="roadmap-week-head">
+                    <span class="roadmap-week-badge">Неделя 7</span>
+                    <span class="roadmap-week-indicator" aria-hidden="true"></span>
+                  </div>
+                  <h4 class="roadmap-week-title">Погружение в Модель ООН (Rules of Procedure)</h4>
+                  <p class="roadmap-week-desc">
+                    Регламент дипломатических конференций: повестка дня, модерируемый кокус (Moderated Caucus), порядок поднятия табличек и этикет официальных дебатов.
+                  </p>
+                  <div class="roadmap-week-practice">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M13.333 4L6 11.333 2.667 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Практика: симуляция заседания комитета ООН</span>
+                  </div>
+                </div>
+
+                <!-- Week 8 -->
+                <div class="roadmap-week-card">
+                  <div class="roadmap-week-head">
+                    <span class="roadmap-week-badge">Неделя 8</span>
+                    <span class="roadmap-week-indicator" aria-hidden="true"></span>
+                  </div>
+                  <h4 class="roadmap-week-title">Драфтинг резолюций и кулуарные переговоры</h4>
+                  <p class="roadmap-week-desc">
+                    Неформальные переговоры (Unmoderated Caucus), сбор коалиций (Blocs), составление преамбулы и оперативных пунктов резолюции, внесение поправок.
+                  </p>
+                  <div class="roadmap-week-practice">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M13.333 4L6 11.333 2.667 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Практика: драфтинг резолюции и голосование делегаций</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Stage 3 (Weeks 9–10) -->
+            <article class="roadmap-stage-card roadmap-stage-card--final reveal">
+              <div class="roadmap-stage-header">
+                <div class="roadmap-stage-badge-group">
+                  <span class="roadmap-stage-badge roadmap-stage-badge--accent">Этап 3</span>
+                  <span class="roadmap-stage-duration">Недели 9–10</span>
+                </div>
+                <h3 class="roadmap-stage-title">Турнирный режим</h3>
+                <p class="roadmap-stage-desc">
+                  Максимальный накал: спонтанные раунды с жестким лимитом подготовки и финальный кубок клуба с внешними экспертами.
+                </p>
+              </div>
+
+              <div class="roadmap-weeks-grid roadmap-weeks-grid--pair">
+                <!-- Week 9 -->
+                <div class="roadmap-week-card">
+                  <div class="roadmap-week-head">
+                    <span class="roadmap-week-badge">Неделя 9</span>
+                    <span class="roadmap-week-indicator" aria-hidden="true"></span>
+                  </div>
+                  <h4 class="roadmap-week-title">Спонтанные раунды (Impromptu: 15 минут подготовки)</h4>
+                  <p class="roadmap-week-desc">
+                    Боевой режим: тема объявляется за 15 минут до раунда. Мозговой штурм без гаджетов, быстрое распределение кейса и раунды на русском и английском.
+                  </p>
+                  <div class="roadmap-week-practice">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M13.333 4L6 11.333 2.667 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Практика: 2 раунда Impromptu со сменой сторон</span>
+                  </div>
+                </div>
+
+                <!-- Week 10 -->
+                <div class="roadmap-week-card roadmap-week-card--featured">
+                  <div class="roadmap-week-head">
+                    <span class="roadmap-week-badge roadmap-week-badge--highlight">Неделя 10</span>
+                    <span class="roadmap-week-trophy" aria-hidden="true">🏆</span>
+                  </div>
+                  <h4 class="roadmap-week-title">Финальный показательный кубок клуба и награждение</h4>
+                  <p class="roadmap-week-desc">
+                    Кульминация семестра: показательный турнир, приглашенные судьи-эксперты, детальный персональный разбор каждого участника, награждение и клубные сертификаты.
+                  </p>
+                  <div class="roadmap-week-practice">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M13.333 4L6 11.333 2.667 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Финал: турнирный кубок, награды и клубный рейтинг</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Schedule Section: Как проходит занятие (4 шага) -->
+      <section class="section prog-schedule-section" aria-labelledby="prog-schedule-title">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Формат встреч</span>
+            <h2 class="section-title" id="prog-schedule-title">Как проходит занятие</h2>
+            <p class="section-subtitle">
+              90 минут структурированной практики: от разбора кейса до подробного судейского фидбека
+            </p>
+          </div>
+          <div class="prog-timeline-row reveal-stagger">
+            <div class="prog-timeline-item">
+              <div class="prog-timeline-time" aria-hidden="true">15'</div>
+              <div class="prog-timeline-content">
+                <h3 class="prog-timeline-title">Теория</h3>
+                <p class="prog-timeline-desc">Короткий интерактивный брифинг по теме недели с разбором аргументов и типичных ошибок.</p>
+              </div>
+            </div>
+            <div class="prog-timeline-item">
+              <div class="prog-timeline-time" aria-hidden="true">20'</div>
+              <div class="prog-timeline-content">
+                <h3 class="prog-timeline-title">Подготовка</h3>
+                <p class="prog-timeline-desc">Команды формулируют кейс по резолюции, распределяют роли спикеров и готовят отбивки.</p>
+              </div>
+            </div>
+            <div class="prog-timeline-item">
+              <div class="prog-timeline-time" aria-hidden="true">40'</div>
+              <div class="prog-timeline-content">
+                <h3 class="prog-timeline-title">Раунд</h3>
+                <p class="prog-timeline-desc">Параллельные дебаты в комнатах по регламенту WSDC с таймингом и вопросами POI.</p>
+              </div>
+            </div>
+            <div class="prog-timeline-item">
+              <div class="prog-timeline-time" aria-hidden="true">15'</div>
+              <div class="prog-timeline-content">
+                <h3 class="prog-timeline-title">Фидбек</h3>
+                <p class="prog-timeline-desc">Судьи подробно разбирают сильные стороны каждого спикера, логику и точки роста.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA band -->
+      <section class="section cta-band reveal" aria-labelledby="prog-cta-title">
+        <div class="container cta-band-inner">
+          <div class="cta-band-text">
+            <h2 class="cta-band-title" id="prog-cta-title">Хочешь пройти программу?</h2>
+            <p class="cta-band-subtitle">Запишись сейчас &mdash; следующий поток стартует скоро.</p>
+          </div>
+          <div class="cta-band-actions">
+            <a href="#register" class="btn btn-primary btn-lg" data-route="register">Записаться</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <main id="view-materials" class="view" data-view="materials" aria-label="Материалы" hidden>
+
+      <!-- Hero -->
+      <div class="view-hero view-hero--materials">
+        <div class="view-hero__bg" aria-hidden="true"></div>
+        <div class="container view-hero__content">
+          <span class="section-tag">База знаний и практика</span>
+          <h1 class="view-hero__title">Материалы и практика</h1>
+          <p class="view-hero__subtitle">Интерактивные инструменты для оттачивания аргументации, быстрого подбора тем и контроля времени раунда.</p>
+          <div class="mat-hero-anchors" role="navigation" aria-label="Быстрый переход к разделам">
+            <button type="button" class="btn btn-ghost btn-sm mat-anchor-btn" data-target="mat-areo-section">
+              <span>🎯 Тренажёр AREO</span>
+            </button>
+            <button type="button" class="btn btn-ghost btn-sm mat-anchor-btn" data-target="mat-tools-section">
+              <span>🎲 Темы и таймер</span>
+            </button>
+            <button type="button" class="btn btn-ghost btn-sm mat-anchor-btn" data-target="mat-cheatsheets-section">
+              <span>📋 Шпаргалки</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 1: AREO Trainer -->
+      <section class="section mat-trainer-section" id="mat-areo-section" aria-labelledby="areo-title">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2 class="section-title" id="areo-title">AREO-Тренажёр: «Собери аргумент»</h2>
+            <p class="section-subtitle">Расставь 4 перемешанных фрагмента в правильную логическую цепочку: Тезис &rarr; Объяснение &rarr; Пример &rarr; Вывод.</p>
+          </div>
+
+          <!-- Formula Strip (Подсказка-формула перед тренажёром) -->
+          <div class="areo-formula-strip reveal" aria-label="Шпаргалка метода AREO">
+            <div class="areo-formula-strip__header">
+              <div class="areo-formula-strip__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="areo-formula-strip__title">Формула убедительного аргумента (метод AREO):</span>
+            </div>
+            <div class="areo-formula-grid">
+              <div class="areo-formula-item">
+                <span class="areo-formula-item__tag tag--a">A · Тезис</span>
+                <p class="areo-formula-item__text"><strong>Главная мысль аргумента</strong> (что мы доказываем).</p>
+              </div>
+              <div class="areo-formula-item">
+                <span class="areo-formula-item__tag tag--r">R · Причина</span>
+                <p class="areo-formula-item__text"><strong>Логика и цепочка</strong> («почему это так»).</p>
+              </div>
+              <div class="areo-formula-item">
+                <span class="areo-formula-item__tag tag--e">E · Пример</span>
+                <p class="areo-formula-item__text"><strong>Реальный факт</strong>, исследование или аналогия.</p>
+              </div>
+              <div class="areo-formula-item">
+                <span class="areo-formula-item__tag tag--o">O · Вывод / Импакт</span>
+                <p class="areo-formula-item__text"><strong>Исход раунда</strong> (почему это решает спор).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="areo-trainer-card reveal">
+            <!-- Case Header Bar -->
+            <div class="areo-case-bar">
+              <div class="areo-case-meta">
+                <span class="areo-badge-step" id="areo-case-indicator">Кейс 1 из 3</span>
+                <span class="areo-case-category" id="areo-case-topic-tag">Школа и образование</span>
+              </div>
+              <div class="areo-case-nav">
+                <button type="button" class="btn btn-ghost btn-sm" id="areo-prev-case-btn" aria-label="Предыдущий кейс">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Назад</span>
+                </button>
+                <button type="button" class="btn btn-ghost btn-sm" id="areo-next-case-btn" aria-label="Следующий кейс">
+                  <span>Вперёд</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Resolution Banner -->
+            <div class="areo-resolution-box">
+              <div class="areo-resolution-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M14 4l-4 4 2 2 4-4-2-2zM4 14l4-4 2 2-4 4-2-2zM7 7l10 10M17 19l4-4M3 21l4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="areo-resolution-content">
+                <span class="areo-resolution-label">Резолюция раунда:</span>
+                <p class="areo-resolution-text" id="areo-resolution-text">Эта палата запретит домашние задания в старших классах</p>
+              </div>
+            </div>
+
+            <!-- AREO Slots Area -->
+            <div class="areo-slots-wrap">
+              <div class="areo-slots-header">
+                <span class="areo-slots-title">Целевые слоты структуры AREO</span>
+                <span class="areo-slots-hint">Кликните по карточке в слоте, чтобы вернуть её обратно в пул</span>
+              </div>
+              <div class="areo-slots-grid" id="areo-slots-grid" role="region" aria-label="Слоты структуры AREO">
+                <!-- Slot A -->
+                <div class="areo-slot" data-slot="assertion" id="slot-assertion" role="region" aria-label="Слот Assertion Тезис">
+                  <div class="areo-slot__header">
+                    <span class="areo-slot__letter">A</span>
+                    <span class="areo-slot__title">Assertion &middot; Тезис</span>
+                  </div>
+                  <div class="areo-slot__body" id="slot-body-assertion">
+                    <div class="areo-slot__empty-msg">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                      <span>Нажмите на тезис из пула ниже</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slot R -->
+                <div class="areo-slot" data-slot="reasoning" id="slot-reasoning" role="region" aria-label="Слот Reasoning Объяснение">
+                  <div class="areo-slot__header">
+                    <span class="areo-slot__letter">R</span>
+                    <span class="areo-slot__title">Reasoning &middot; Объяснение</span>
+                  </div>
+                  <div class="areo-slot__body" id="slot-body-reasoning">
+                    <div class="areo-slot__empty-msg">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                      <span>Нажмите на объяснение из пула ниже</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slot E -->
+                <div class="areo-slot" data-slot="evidence" id="slot-evidence" role="region" aria-label="Слот Evidence Пример">
+                  <div class="areo-slot__header">
+                    <span class="areo-slot__letter">E</span>
+                    <span class="areo-slot__title">Evidence &middot; Пример / факт</span>
+                  </div>
+                  <div class="areo-slot__body" id="slot-body-evidence">
+                    <div class="areo-slot__empty-msg">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                      <span>Нажмите на пример или факт из пула</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slot O -->
+                <div class="areo-slot" data-slot="outcome" id="slot-outcome" role="region" aria-label="Слот Outcome Вывод">
+                  <div class="areo-slot__header">
+                    <span class="areo-slot__letter">O</span>
+                    <span class="areo-slot__title">Outcome &middot; Вывод / импакт</span>
+                  </div>
+                  <div class="areo-slot__body" id="slot-body-outcome">
+                    <div class="areo-slot__empty-msg">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                      <span>Нажмите на вывод или импакт из пула</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pool of Cards -->
+            <div class="areo-pool-wrap">
+              <div class="areo-pool-header">
+                <span class="areo-pool-title">Пул фрагментов аргумента</span>
+                <span class="areo-pool-hint">Нажмите на карточку, чтобы отправить её в первый свободный слот AREO</span>
+              </div>
+              <div class="areo-pool-grid" id="areo-pool-grid" role="region" aria-label="Пул карточек аргумента">
+                <!-- Injected dynamically by js/materials.js -->
+              </div>
+            </div>
+
+            <!-- Action Controls & Status Bar -->
+            <div class="areo-actions-bar">
+              <div class="areo-actions-left">
+                <button type="button" class="btn btn-primary" id="areo-check-btn">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M16.667 5l-9.167 9.167L3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Проверить</span>
+                </button>
+                <button type="button" class="btn btn-ghost" id="areo-reset-btn">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2.5 8a5.5 5.5 0 119.39 3.89l-1.39-1.39M2.5 8V4M2.5 8H6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Сбросить</span>
+                </button>
+              </div>
+
+              <div class="areo-feedback" id="areo-feedback" aria-live="polite">
+                <!-- Status badge / message injected by JS -->
+              </div>
+
+              <div class="areo-actions-right">
+                <button type="button" class="btn btn-primary is-hidden" id="areo-next-case-action-btn">
+                  <span>Следующий кейс</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Resolution Generator + Debate Timer -->
+      <section class="section mat-tools-section" id="mat-tools-section" aria-labelledby="tools-title">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Практика раунда</span>
+            <h2 class="section-title" id="tools-title">Генератор тем &amp; Турнирный таймер</h2>
+            <p class="section-subtitle">Быстрая жеребьевка резолюций формата World Schools и точный таймер регламента с контролем защищенных минут.</p>
+          </div>
+
+          <div class="mat-tools-grid reveal">
+            <!-- Left Tool: Generator -->
+            <article class="tool-card tool-card--generator" aria-labelledby="generator-title">
+              <div class="tool-card__header">
+                <div class="tool-card__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                  <h3 class="tool-card__title" id="generator-title">Генератор тем раунда</h3>
+                  <p class="tool-card__desc">В дебатах тема называется "резолюцией" и начинается со слов "Эта палата..." (THW).</p>
+                </div>
+              </div>
+
+              <!-- Filter Chips -->
+              <div class="tool-chips-bar" role="tablist" aria-label="Категории тем">
+                <button type="button" class="tool-chip is-active" data-filter="all" role="tab" aria-selected="true">Все</button>
+                <button type="button" class="tool-chip" data-filter="school" role="tab" aria-selected="false">Школа</button>
+                <button type="button" class="tool-chip" data-filter="tech" role="tab" aria-selected="false">Технологии и ИИ</button>
+                <button type="button" class="tool-chip" data-filter="society" role="tab" aria-selected="false">Общество</button>
+                <button type="button" class="tool-chip" data-filter="culture" role="tab" aria-selected="false">Поп-культура и спорт</button>
+              </div>
+
+              <!-- Resolution Card Area -->
+              <div class="generator-display" id="generator-display">
+                <div class="generator-topic-meta">
+                  <span class="generator-badge" id="generator-cat-badge">Школа &middot; Образование</span>
+                  <span class="generator-format-badge">WS Format</span>
+                </div>
+                <div class="generator-text-wrap">
+                  <blockquote class="generator-topic-text" id="generator-topic-text">
+                    «Эта палата заменит традиционные оценки (1–5) качественной обратной связью без баллов»
+                  </blockquote>
+                </div>
+              </div>
+
+              <!-- Generator Actions -->
+              <div class="generator-actions">
+                <button type="button" class="btn btn-primary" id="btn-random-topic">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M19.5 8l-4-4m4 4l-4 4m4-4H9C6.239 8 4 10.239 4 13v0m0 3l4 4m-4-4l4-4m-4 4h10.5c2.761 0 5-2.239 5-5v0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Случайная резолюция</span>
+                </button>
+                <button type="button" class="btn btn-ghost" id="btn-copy-topic" aria-label="Скопировать тему">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                  <span>Копировать</span>
+                </button>
+              </div>
+            </article>
+
+            <!-- Right Tool: Debate Timer -->
+            <article class="tool-card tool-card--timer" aria-labelledby="timer-title">
+              <div class="tool-card__header">
+                <div class="tool-card__icon tool-card__icon--accent" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <div>
+                  <h3 class="tool-card__title" id="timer-title">Дебатный таймер</h3>
+                  <p class="tool-card__desc">Турнирные тайминги: POI, речи, подготовка к раунду</p>
+                </div>
+              </div>
+
+              <!-- Timer Presets -->
+              <div class="timer-presets-bar" role="group" aria-label="Пресеты времени">
+                <button type="button" class="timer-preset-btn" data-seconds="60" aria-pressed="false">
+                  <span class="preset-time">1 мин</span>
+                  <span class="preset-name">POI / реплика</span>
+                </button>
+                <button type="button" class="timer-preset-btn" data-seconds="180" aria-pressed="false">
+                  <span class="preset-time">3 мин</span>
+                  <span class="preset-name">Блиц</span>
+                </button>
+                <button type="button" class="timer-preset-btn is-active" data-seconds="300" aria-pressed="true">
+                  <span class="preset-time">5 мин</span>
+                  <span class="preset-name">Спич</span>
+                </button>
+                <button type="button" class="timer-preset-btn" data-seconds="900" aria-pressed="false">
+                  <span class="preset-time">15 мин</span>
+                  <span class="preset-name">Подготовка</span>
+                </button>
+              </div>
+
+              <!-- Timer Scoreboard -->
+              <div class="timer-display-box" id="timer-display-box">
+                <div class="timer-meta-info">
+                  <span class="timer-stage-badge" id="timer-stage-badge">Готов к запуску</span>
+                  <span class="timer-protection-hint" id="timer-protection-hint">Защищённая 1-я и последняя минуты</span>
+                </div>
+                <div class="timer-digits" id="timer-digits" aria-live="off" role="timer" aria-atomic="true">05:00</div>
+                <div class="timer-progress-track">
+                  <div class="timer-progress-bar" id="timer-progress-bar" style="width: 100%;"></div>
+                </div>
+              </div>
+
+              <!-- Timer Controls -->
+              <div class="timer-controls">
+                <button type="button" class="btn btn-primary timer-btn-start" id="timer-start-btn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  <span id="timer-start-label">Старт</span>
+                </button>
+                <button type="button" class="btn btn-ghost timer-btn-pause" id="timer-pause-btn" disabled>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+                  <span>Пауза</span>
+                </button>
+                <button type="button" class="btn btn-ghost timer-btn-reset" id="timer-reset-btn">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2.5 8a5.5 5.5 0 119.39 3.89l-1.39-1.39M2.5 8V4M2.5 8H6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Сброс</span>
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Cheatsheets Base -->
+      <section class="section mat-cheatsheets-section" id="mat-cheatsheets-section" aria-labelledby="cheats-title">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Шпаргалки дебатёра</span>
+            <h2 class="section-title" id="cheats-title">База быстрых шпаргалок</h2>
+            <p class="section-subtitle">Тактические правила победного раунда: держи открытыми во время подготовки или скопируй ключевую суть в один клик.</p>
+          </div>
+
+          <div class="cheats-grid reveal-stagger">
+            <!-- Card 1: Конструктор речи 5 минут -->
+            <article class="cheat-card" id="cheat-card-structure">
+              <div class="cheat-card__top">
+                <div class="cheat-card__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <div class="cheat-card__header">
+                  <span class="cheat-card__badge">Тайминг речи</span>
+                  <h3 class="cheat-card__title">Конструктор речи 5 минут</h3>
+                </div>
+              </div>
+              <p class="cheat-card__desc">Пошаговый таймлайн победной речи в формате World Schools:</p>
+
+              <div class="cheat-timeline">
+                <div class="cheat-timeline__item">
+                  <div class="cheat-timeline__time">0:00 &ndash; 1:00</div>
+                  <div class="cheat-timeline__body">
+                    <strong class="cheat-timeline__heading">Хук и модель</strong>
+                    <p class="cheat-timeline__text">Яркий пример или аналогия, дефиниции спорных терминов, статус-кво и презентация модели/механизма команды. Защищённая минута (без POI).</p>
+                  </div>
+                </div>
+                <div class="cheat-timeline__item">
+                  <div class="cheat-timeline__time">1:00 &ndash; 4:00</div>
+                  <div class="cheat-timeline__body">
+                    <strong class="cheat-timeline__heading">Аргументы и отбивка</strong>
+                    <p class="cheat-timeline__text">Контраргументация линии оппонентов + развертывание 2 ключевых собственных аргументов строго по цепочке AREO. Окно открытых вопросов (взять 1–2 POI).</p>
+                  </div>
+                </div>
+                <div class="cheat-timeline__item">
+                  <div class="cheat-timeline__time">4:00 &ndash; 5:00</div>
+                  <div class="cheat-timeline__body">
+                    <strong class="cheat-timeline__heading">Взвешивание (Weighing)</strong>
+                    <p class="cheat-timeline__text">Сравнение миров («наш мир» vs «мир оппонентов»). Доказательство масштабности, необратимости и долгосрочности вашего влияния. Защищённая минута.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cheat-card__bottom">
+                <button type="button" class="btn btn-ghost btn-sm cheat-copy-btn" data-cheat="structure">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                  <span>Скопировать суть</span>
+                </button>
+              </div>
+            </article>
+
+            <!-- Card 2: Правило POI -->
+            <article class="cheat-card" id="cheat-card-poi">
+              <div class="cheat-card__top">
+                <div class="cheat-card__icon cheat-card__icon--poi" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="cheat-card__header">
+                  <span class="cheat-card__badge">Взаимодействие</span>
+                  <h3 class="cheat-card__title">Правило POI</h3>
+                </div>
+              </div>
+              <p class="cheat-card__desc">Как задавать вопрос за 15 секунд и как отклонять или принимать:</p>
+
+              <div class="cheat-poi-list">
+                <div class="cheat-poi-item">
+                  <span class="cheat-poi-bullet">15 сек</span>
+                  <div class="cheat-poi-content">
+                    <strong>Как задавать вопрос:</strong>
+                    <p>Встаньте со словами «POI!» или «Вопрос!». Сформулируйте ровно один острый вопрос-ловушку или панч. Лимит — строго до 15 секунд, без длинных предисловий.</p>
+                  </div>
+                </div>
+                <div class="cheat-poi-item">
+                  <span class="cheat-poi-bullet">&plusmn;</span>
+                  <div class="cheat-poi-content">
+                    <strong>Как принимать и отклонять:</strong>
+                    <p>Спикер полностью контролирует сцену. Принять: «Слушаю вас» / «Да, пожалуйста». Отклонить: вежливым жестом ладони или словами «Спасибо, нет» / «Чуть позже».</p>
+                  </div>
+                </div>
+                <div class="cheat-poi-item">
+                  <span class="cheat-poi-bullet">1&ndash;2</span>
+                  <div class="cheat-poi-content">
+                    <strong>Баланс раунда:</strong>
+                    <p>За 5-минутную речь оптимально принять ровно 1–2 вопроса (меньше — уход от столкновения, больше — потеря контроля над временем). Запрещены на 1-й и 5-й минутах.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cheat-card__bottom">
+                <button type="button" class="btn btn-ghost btn-sm cheat-copy-btn" data-cheat="poi">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                  <span>Скопировать суть</span>
+                </button>
+              </div>
+            </article>
+
+            <!-- Card 3: 4 главные ошибки логики -->
+            <article class="cheat-card" id="cheat-card-fallacies">
+              <div class="cheat-card__top">
+                <div class="cheat-card__icon cheat-card__icon--fallacy" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="cheat-card__header">
+                  <span class="cheat-card__badge">Логика</span>
+                  <h3 class="cheat-card__title">4 главные ошибки логики</h3>
+                </div>
+              </div>
+              <p class="cheat-card__desc">Софизмы и когнитивные ловушки, за которые судьи снимают баллы:</p>
+
+              <div class="cheat-fallacies-list">
+                <div class="cheat-fallacy-item">
+                  <strong class="cheat-fallacy-name">1. Соломенное чучело (Straw Man)</strong>
+                  <p class="cheat-fallacy-text">Искажение аргумента оппонента в карикатурную форму для лёгкого опровержения. <em>Фикс:</em> опровергайте реальный тезис, а не его гротеск.</p>
+                </div>
+                <div class="cheat-fallacy-item">
+                  <strong class="cheat-fallacy-name">2. Ad Hominem (Переход на личности)</strong>
+                  <p class="cheat-fallacy-text">Атака на мотивы, опыт или возраст оппонента вместо сути речи. <em>Фикс:</em> требуйте анализа аргумента, а не личных качеств спикера.</p>
+                </div>
+                <div class="cheat-fallacy-item">
+                  <strong class="cheat-fallacy-name">3. Ложная дилемма (False Dilemma)</strong>
+                  <p class="cheat-fallacy-text">Сведение спектра решений к двум крайностям («либо полный запрет, либо катастрофа»). <em>Фикс:</em> укажите на промежуточные альтернативы.</p>
+                </div>
+                <div class="cheat-fallacy-item">
+                  <strong class="cheat-fallacy-name">4. Slippery Slope (Скользкая дорожка)</strong>
+                  <p class="cheat-fallacy-text">Утверждение без доказательств, что один шаг неминуемо вызовет цепь катастроф. <em>Фикс:</em> требуйте доказать причинную связь каждого звена.</p>
+                </div>
+              </div>
+
+              <div class="cheat-card__bottom">
+                <button type="button" class="btn btn-ghost btn-sm cheat-copy-btn" data-cheat="fallacies">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                  <span>Скопировать суть</span>
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: External Resources & Knowledge Base -->
+      <section class="section mat-resources-section" id="mat-resources-section" aria-labelledby="resources-title">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Полезные ссылки</span>
+            <h2 class="section-title" id="resources-title">База знаний и первоисточники</h2>
+            <p class="section-subtitle">Официальные регламенты, гайды по MUN и разборы логики для углублённой подготовки к турнирам.</p>
+          </div>
+
+          <div class="mat-resources-grid reveal-stagger">
+            <!-- Resource 1: MUN (UN Official Guide) -->
+            <a href="https://www.un.org/en/mun" target="_blank" rel="noopener noreferrer" class="resource-card" aria-label="Официальное руководство ООН по MUN (откроется в новой вкладке)">
+              <div class="resource-card__header">
+                <span class="resource-card__badge resource-card__badge--mun">ООН · Регламент MUN</span>
+                <span class="resource-card__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+              <h3 class="resource-card__title">Официальное руководство ООН по MUN</h3>
+              <p class="resource-card__desc">Регламент моделирования, дипломатический протокол и стандарты резолюций от Организации Объединённых Наций.</p>
+              <div class="resource-card__link-text">
+                <span>un.org</span>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </a>
+
+            <!-- Resource 2: Best Delegate -->
+            <a href="https://bestdelegate.com/" target="_blank" rel="noopener noreferrer" class="resource-card" aria-label="Best Delegate: База знаний (откроется в новой вкладке)">
+              <div class="resource-card__header">
+                <span class="resource-card__badge">Best Delegate · База знаний</span>
+                <span class="resource-card__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+              <h3 class="resource-card__title">Best Delegate: База знаний</h3>
+              <p class="resource-card__desc">Руководства по написанию Position Papers, тактике кулуарных переговоров и публичным речам.</p>
+              <div class="resource-card__link-text">
+                <span>bestdelegate.com</span>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </a>
+
+            <!-- Resource 3: Fallacies -->
+            <a href="https://yourlogicalfallacyis.com/" target="_blank" rel="noopener noreferrer" class="resource-card" aria-label="Интерактивный атлас логических ошибок (откроется в новой вкладке)">
+              <div class="resource-card__header">
+                <span class="resource-card__badge resource-card__badge--logic">Логика · Софизмы</span>
+                <span class="resource-card__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+              <h3 class="resource-card__title">Интерактивный атлас логических ошибок</h3>
+              <p class="resource-card__desc">Каталог аргументативных ловушек (Straw Man, Ad Hominem, скользкая дорожка) с примерами.</p>
+              <div class="resource-card__link-text">
+                <span>yourlogicalfallacyis.com</span>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </a>
+
+            <!-- Resource 4: SEP -->
+            <a href="https://plato.stanford.edu/" target="_blank" rel="noopener noreferrer" class="resource-card" aria-label="Стэнфордская энциклопедия философии (SEP) (откроется в новой вкладке)">
+              <div class="resource-card__header">
+                <span class="resource-card__badge resource-card__badge--archive">SEP · Стэнфорд</span>
+                <span class="resource-card__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+              <h3 class="resource-card__title">Стэнфордская энциклопедия философии (SEP)</h3>
+              <p class="resource-card__desc">Академическая база аргументов по биоэтике, социальной справедливости, технологиям и праву.</p>
+              <div class="resource-card__link-text">
+                <span>plato.stanford.edu</span>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Toast Notification Container for Copied state -->
+      <div id="mat-toast" class="mat-toast" role="status" aria-live="polite" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        <span id="mat-toast-msg">Скопировано!</span>
+      </div>
+
+    </main>
+
+    <main id="view-register" class="view" data-view="register" aria-label="Вступить" hidden>
+
+      <div class="view-hero view-hero--register">
+        <div class="view-hero__bg" aria-hidden="true"></div>
+        <div class="container view-hero__content">
+          <span class="section-tag">Вступление</span>
+          <h1 class="view-hero__title">Записаться в VOX</h1>
+          <p class="view-hero__subtitle">Заполни форму — мы свяжемся в течение дня</p>
+        </div>
+      </div>
+
+      <section class="section reg-section" aria-labelledby="reg-form-title">
+        <div class="container">
+          <div class="reg-layout">
+
+
+            <!-- RIGHT COLUMN: Registration Form -->
+            <div class="reg-form-col reveal">
+              <div class="reg-form-card">
+                <div class="reg-form-header">
+                  <h2 class="section-title reg-form-heading" id="reg-form-title">Заявка на вступление</h2>
+                  <p class="reg-form-desc">Заполни короткую анкету. Наш координатор свяжется с тобой в Telegram или WhatsApp.</p>
+                </div>
+
+                <form class="reg-form" id="reg-form" novalidate>
+
+                  <!-- Honeypot anti-spam trap (hidden from real users, caught by bots) -->
+                  <div class="reg-honeypot" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; overflow: hidden;" aria-hidden="true">
+                    <label for="reg-website">Website</label>
+                    <input type="text" name="website" id="reg-website" tabindex="-1" autocomplete="off" />
+                  </div>
+
+                  <!-- 1. Track Selection (Radio Cards) -->
+                  <div class="form-group form-group--track">
+                    <span class="form-label">Выбери направление <span class="form-required">*</span></span>
+                    <div class="track-options-grid" role="radiogroup" aria-label="Выбор направления">
+                      <label class="track-opt-card is-active" for="track-debates-opt">
+                        <input type="radio" name="reg_track" id="track-debates-opt" value="debates" checked />
+                        <div class="track-opt-inner">
+                          <span class="track-opt-icon" aria-hidden="true">🎙</span>
+                          <div class="track-opt-info">
+                            <strong class="track-opt-title">Дебаты</strong>
+                            <span class="track-opt-sub">World Schools</span>
+                          </div>
+                        </div>
+                      </label>
+                      <label class="track-opt-card" for="track-mun-opt">
+                        <input type="radio" name="reg_track" id="track-mun-opt" value="mun" />
+                        <div class="track-opt-inner">
+                          <span class="track-opt-icon" aria-hidden="true">🌐</span>
+                          <div class="track-opt-info">
+                            <strong class="track-opt-title">Модель ООН</strong>
+                            <span class="track-opt-sub">Дипломатия &amp; MUN</span>
+                          </div>
+                        </div>
+                      </label>
+                      <label class="track-opt-card" for="track-both-opt">
+                        <input type="radio" name="reg_track" id="track-both-opt" value="both" />
+                        <div class="track-opt-inner">
+                          <span class="track-opt-icon" aria-hidden="true">⚡</span>
+                          <div class="track-opt-info">
+                            <strong class="track-opt-title">Оба трека</strong>
+                            <span class="track-opt-sub">Максимум практики</span>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- 2. Full Name -->
+                  <div class="form-group">
+                    <label class="form-label" for="reg-name">Имя и Фамилия <span class="form-required">*</span></label>
+                    <input class="form-input" id="reg-name" type="text" placeholder="Алия Бекова" autocomplete="name" required />
+                  </div>
+
+                  <!-- 3. Grade Selection (8, 9, 10, 11) -->
+                  <div class="form-group form-group--grade">
+                    <span class="form-label">Класс обучения <span class="form-required">*</span></span>
+                    <div class="grade-pills-group" role="radiogroup" aria-label="Класс обучения">
+                      <label class="grade-pill-opt">
+                        <input type="radio" name="reg_grade" value="8" required />
+                        <span class="grade-pill">8 класс</span>
+                      </label>
+                      <label class="grade-pill-opt is-active">
+                        <input type="radio" name="reg_grade" value="9" checked />
+                        <span class="grade-pill">9 класс</span>
+                      </label>
+                      <label class="grade-pill-opt">
+                        <input type="radio" name="reg_grade" value="10" />
+                        <span class="grade-pill">10 класс</span>
+                      </label>
+                      <label class="grade-pill-opt">
+                        <input type="radio" name="reg_grade" value="11" />
+                        <span class="grade-pill">11 класс</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- 4. Contact (Telegram / WhatsApp) -->
+                  <div class="form-group">
+                    <label class="form-label" for="reg-contact">Telegram (@username) или WhatsApp для связи <span class="form-required">*</span></label>
+                    <input class="form-input" id="reg-contact" type="text" placeholder="@username или +7 (700) 000-00-00" required />
+                  </div>
+
+                  <!-- 5. English Level (A2, B1, B2+) -->
+                  <div class="form-group form-group--english">
+                    <span class="form-label">Уровень английского <span class="form-label-hint">(любой уровень &mdash; ок)</span></span>
+                    <div class="english-badges-group" role="radiogroup" aria-label="Уровень английского">
+                      <label class="english-badge-opt">
+                        <input type="radio" name="reg_english" value="A2" />
+                        <span class="english-badge">
+                          <strong class="english-badge-lvl">A2</strong>
+                          <span class="english-badge-sub">Базовый</span>
+                        </span>
+                      </label>
+                      <label class="english-badge-opt is-active">
+                        <input type="radio" name="reg_english" value="B1" checked />
+                        <span class="english-badge">
+                          <strong class="english-badge-lvl">B1</strong>
+                          <span class="english-badge-sub">Средний</span>
+                        </span>
+                      </label>
+                      <label class="english-badge-opt">
+                        <input type="radio" name="reg_english" value="B2+" />
+                        <span class="english-badge">
+                          <strong class="english-badge-lvl">B2+</strong>
+                          <span class="english-badge-sub">Свободный</span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- 6. Question (optional) -->
+                  <div class="form-group">
+                    <label class="form-label" for="reg-question">Вопрос или комментарий <span class="form-label-hint">(необязательно)</span></label>
+                    <textarea class="form-input form-textarea" id="reg-question" name="reg_question" rows="3" placeholder="Например: когда ближайшая встреча? или есть ли вечерние форматы?"></textarea>
+                  </div>
+
+                  <!-- Submit button -->
+                  <div class="form-actions">
+                    <button type="submit" class="btn btn-primary btn-lg reg-submit" id="reg-submit-btn">
+                      <span class="reg-submit-spinner" aria-hidden="true" style="display: none;">
+                        <svg class="spinner-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                          <circle cx="12" cy="12" r="10" stroke-opacity="0.25" stroke="currentColor"/>
+                          <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"/>
+                        </svg>
+                      </span>
+                      <span class="reg-submit-label">Отправить заявку</span>
+                      <svg class="btn-icon reg-submit-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                  </div>
+                </form>
+
+                <!-- Success message -->
+                <div class="form-success" id="form-success" hidden>
+                  <div class="form-success-icon" aria-hidden="true">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                      <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8" />
+                      <path d="M8 12l3 3 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="form-success-text">
+                    <h4 class="form-success-title">Заявка принята! Скоро напишем тебе в Telegram 🎉</h4>
+                    <p class="form-success-desc">Мы свяжемся с тобой в течение дня с деталями ближайшей встречи и приглашением в чат клуба.</p>
+                    <button type="button" class="btn btn-ghost btn-sm" id="form-reset-btn" style="margin-top: var(--space-4); align-self: flex-start;">
+                      Отправить ещё одну заявку
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">VOX</span>
+        <p class="footer-tagline">Школьный дебатный клуб &middot; World Schools Format</p>
+      </div>
+      <nav class="footer-nav" aria-label="Навигация в подвале">
+        <a href="#home" data-route="home">Главная</a>
+        <a href="#program" data-route="program">Программа</a>
+        <a href="#materials" data-route="materials">Материалы</a>
+        <a href="#register" data-route="register">Вступить</a>
+      </nav>
+      <p class="footer-copy">&copy; <span id="year"></span> VOX Debate Club. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/theme.js" defer></script>
+  <script src="js/nav.js" defer></script>
+  <script src="js/animate.js" defer></script>
+  <script src="js/home.js" defer></script>
+  <script src="js/program.js" defer></script>
+  <script src="js/materials.js" defer></script>
+  <script src="js/router.js" defer></script>
+  <script src="js/register.js" defer></script>
+</body>
+
+</html>
