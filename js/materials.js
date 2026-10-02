@@ -314,7 +314,8 @@
       evidence: null,
       outcome: null
     },
-    poolCards: []
+    poolCards: [],
+    selectedSlot: null
   };
 
   function shuffleArray(arr) {
@@ -332,6 +333,7 @@
     if (index < 0) index = AREO_CASES.length - 1;
     if (index >= AREO_CASES.length) index = 0;
     areoState.currentCaseIndex = index;
+    areoState.selectedSlot = null;
 
     var c = AREO_CASES[index];
     areoState.slotAssignments = {
@@ -400,8 +402,15 @@
       var bodyEl = document.getElementById('slot-body-' + slotKey);
       if (!slotEl || !bodyEl) return;
 
-      // Reset validation classes
+      // Reset validation classes and apply is-selected state
       slotEl.classList.remove('is-correct', 'is-wrong', 'is-wrong-shake');
+      if (areoState.selectedSlot === slotKey) {
+        slotEl.classList.add('is-selected');
+        slotEl.setAttribute('aria-selected', 'true');
+      } else {
+        slotEl.classList.remove('is-selected');
+        slotEl.removeAttribute('aria-selected');
+      }
       clearDom(bodyEl);
 
       var assignedCard = areoState.slotAssignments[slotKey];
@@ -411,7 +420,7 @@
         var cardDiv = document.createElement('div');
         cardDiv.className = 'areo-slot-card';
         cardDiv.setAttribute('data-card-id', assignedCard.id);
-        cardDiv.title = 'Нажмите, чтобы вернуть в пул';
+        cardDiv.title = 'Нажмите для выбора / обмена местами';
         cardDiv.setAttribute('role', 'button');
         cardDiv.tabIndex = 0;
 
@@ -421,7 +430,8 @@
 
         var hintSpan = document.createElement('span');
         hintSpan.className = 'areo-slot-card__hint';
-        hintSpan.innerHTML = '<svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M12 4L4 12M4 4l8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Вернуть в пул';
+        hintSpan.innerHTML = '<svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M12 4L4 12M4 4l8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> сброс';
+        hintSpan.title = 'Вернуть карточку в пул';
 
         cardDiv.appendChild(textP);
         cardDiv.appendChild(hintSpan);
@@ -508,28 +518,32 @@
     });
   }
 
-  // Put card in first free slot
+  // Put card in first free slot (or into selected slot if empty)
   function handlePoolCardClick(cardId) {
     var currentCase = AREO_CASES[areoState.currentCaseIndex];
     var cardObj = currentCase.cards.find(function (c) { return c.id === cardId; });
     if (!cardObj) return;
 
-    // Find first empty slot
     var targetSlot = null;
-    for (var i = 0; i < areoState.slotOrder.length; i++) {
-      var slotKey = areoState.slotOrder[i];
-      if (!areoState.slotAssignments[slotKey]) {
-        targetSlot = slotKey;
-        break;
+    if (areoState.selectedSlot && !areoState.slotAssignments[areoState.selectedSlot]) {
+      targetSlot = areoState.selectedSlot;
+    } else {
+      for (var i = 0; i < areoState.slotOrder.length; i++) {
+        var slotKey = areoState.slotOrder[i];
+        if (!areoState.slotAssignments[slotKey]) {
+          targetSlot = slotKey;
+          break;
+        }
       }
     }
 
     if (!targetSlot) {
-      showToast('Все слоты AREO заполнены! Нажмите «Проверить» или освободите слот.');
+      showToast('Все слоты AREO заполнены! Выберите слот для обмена местами (свапа).');
       return;
     }
 
     areoState.slotAssignments[targetSlot] = cardObj;
+    areoState.selectedSlot = null;
     renderAreoSlots();
     renderAreoPool();
 
@@ -538,10 +552,49 @@
     clearDom(feedbackEl);
   }
 
-  // Return card from slot to pool
-  function handleSlotCardClick(slotKey) {
-    if (!areoState.slotAssignments[slotKey]) return;
-    areoState.slotAssignments[slotKey] = null;
+  // Handle slot click: selection, click-swap, or remove hint
+  function handleSlotClick(slotKey, isRemoveHintClick) {
+    // If explicit remove hint clicked, return to pool
+    if (isRemoveHintClick) {
+      if (!areoState.slotAssignments[slotKey]) return;
+      areoState.slotAssignments[slotKey] = null;
+      if (areoState.selectedSlot === slotKey) {
+        areoState.selectedSlot = null;
+      }
+      renderAreoSlots();
+      renderAreoPool();
+      var feedbackEl = document.getElementById('areo-feedback');
+      clearDom(feedbackEl);
+      var nextCaseBtn = document.getElementById('areo-next-case-action-btn');
+      if (nextCaseBtn) nextCaseBtn.classList.add('is-hidden');
+      return;
+    }
+
+    var currentSelected = areoState.selectedSlot;
+
+    // 1. If nothing selected yet:
+    if (!currentSelected) {
+      // Tap on a filled slot selects it
+      if (areoState.slotAssignments[slotKey]) {
+        areoState.selectedSlot = slotKey;
+        renderAreoSlots();
+      }
+      return;
+    }
+
+    // 2. Tapping the already selected slot -> Deselect
+    if (currentSelected === slotKey) {
+      areoState.selectedSlot = null;
+      renderAreoSlots();
+      return;
+    }
+
+    // 3. Tapping a second slot (empty or filled) -> SWAP!
+    var temp = areoState.slotAssignments[slotKey];
+    areoState.slotAssignments[slotKey] = areoState.slotAssignments[currentSelected];
+    areoState.slotAssignments[currentSelected] = temp;
+    areoState.selectedSlot = null;
+
     renderAreoSlots();
     renderAreoPool();
 
@@ -600,6 +653,7 @@
   }
 
   function resetAreo() {
+    areoState.selectedSlot = null;
     loadAreoCase(areoState.currentCaseIndex);
   }
 
@@ -644,26 +698,26 @@
       });
     }
 
-    // Delegate click inside slot to remove card
+    // Delegate click inside slot for selection and Click-Swap
     if (slotsGrid) {
       slotsGrid.addEventListener('click', function (e) {
-        var slotCardEl = e.target.closest('.areo-slot-card');
-        if (!slotCardEl) return;
-        var slotEl = slotCardEl.closest('.areo-slot');
+        var slotEl = e.target.closest('.areo-slot');
         if (!slotEl) return;
         var slotKey = slotEl.getAttribute('data-slot');
-        if (slotKey) handleSlotCardClick(slotKey);
+        if (!slotKey) return;
+        var isRemoveHint = !!e.target.closest('.areo-slot-card__hint');
+        handleSlotClick(slotKey, isRemoveHint);
       });
       // Keyboard support
       slotsGrid.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' || e.key === ' ') {
-          var slotCardEl = e.target.closest('.areo-slot-card');
-          if (!slotCardEl) return;
-          var slotEl = slotCardEl.closest('.areo-slot');
+          var slotEl = e.target.closest('.areo-slot');
           if (!slotEl) return;
-          e.preventDefault();
           var slotKey = slotEl.getAttribute('data-slot');
-          if (slotKey) handleSlotCardClick(slotKey);
+          if (!slotKey) return;
+          e.preventDefault();
+          var isRemoveHint = !!e.target.closest('.areo-slot-card__hint');
+          handleSlotClick(slotKey, isRemoveHint);
         }
       });
     }

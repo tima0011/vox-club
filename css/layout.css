@@ -187,14 +187,14 @@
   width: 100%;
   height: 100vh;
   height: 100dvh;
-  background: #0b0e14;
+  background: #08090d;
   z-index: 9999;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: var(--space-8);
-  padding: max(88px, calc(var(--nav-height) + env(safe-area-inset-top, 24px))) var(--space-6) max(36px, env(safe-area-inset-bottom, 36px));
+  padding: max(88px, calc(var(--nav-height) + env(safe-area-inset-top, 24px))) var(--space-6) max(40px, env(safe-area-inset-bottom, 40px));
   box-sizing: border-box;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -213,27 +213,61 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-2);
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  max-width: 320px;
 }
 
 .mobile-nav-link {
   font-family: var(--font-heading);
-  font-size: var(--text-3xl);
-  font-weight: 700;
-  color: var(--color-text-2);
-  padding: var(--space-2) var(--space-6);
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  color: #f8fafc;
+  padding: 10px 20px;
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
   text-decoration: none;
+  text-align: center;
+  display: block;
+  width: 100%;
 }
 
-.mobile-nav-link:hover,
+.mobile-nav-link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
 .mobile-nav-link.active {
-  color: var(--color-text);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .mobile-cta {
   margin-top: var(--space-4);
+  width: 100%;
+  max-width: 280px;
+  background: #ffffff;
+  color: #08090d;
+  font-weight: 600;
+  font-size: var(--text-base);
+  padding: 13px 24px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.mobile-cta:hover {
+  background: #f1f5f9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
 }
 
 /* ── CONTAINER ── */
