@@ -106,6 +106,7 @@
     var mobileMenu = document.getElementById('mobile-menu');
     if (burger && burger.getAttribute('aria-expanded') === 'true') {
       burger.setAttribute('aria-expanded', 'false');
+      burger.setAttribute('aria-label', 'Открыть меню');
       if (mobileMenu) { mobileMenu.setAttribute('hidden', ''); }
       document.body.style.overflow = '';
     }

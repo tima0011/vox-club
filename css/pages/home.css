@@ -1,13 +1,13 @@
-﻿/* css/pages/home.css — Hero & Home-specific styles */
+/* css/pages/home.css — Hero & Home-specific styles */
 
 /* ── HERO ── */
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - var(--nav-height));
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding-top: var(--nav-height);
+  padding-top: 0;
 }
 
 /* Background grid */
@@ -165,4 +165,19 @@
   background: var(--color-accent);
   transform-origin: top;
   animation: scrollLine 1.8s ease-in-out infinite;
+}
+
+/* ── MOBILE HERO RESPONSIVE ── */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding-top: var(--space-4);
+    padding-bottom: var(--space-12);
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    padding-top: var(--space-4);
+    padding-bottom: var(--space-4);
+  }
 }

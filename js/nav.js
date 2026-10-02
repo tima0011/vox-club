@@ -24,6 +24,7 @@
         var isOpen = burger.getAttribute('aria-expanded') === 'true';
         var nextState = !isOpen;
         burger.setAttribute('aria-expanded', String(nextState));
+        burger.setAttribute('aria-label', nextState ? 'Закрыть меню' : 'Открыть меню');
         if (nextState) {
           mobileMenu.removeAttribute('hidden');
           document.body.style.overflow = 'hidden';
@@ -37,9 +38,20 @@
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && burger.getAttribute('aria-expanded') === 'true') {
           burger.setAttribute('aria-expanded', 'false');
+          burger.setAttribute('aria-label', 'Открыть меню');
           mobileMenu.setAttribute('hidden', '');
           document.body.style.overflow = '';
           burger.focus();
+        }
+      });
+
+      /* Close on backdrop tap */
+      mobileMenu.addEventListener('click', function (e) {
+        if (e.target === mobileMenu) {
+          burger.setAttribute('aria-expanded', 'false');
+          burger.setAttribute('aria-label', 'Открыть меню');
+          mobileMenu.setAttribute('hidden', '');
+          document.body.style.overflow = '';
         }
       });
     }
