@@ -2,13 +2,13 @@
 
 > **Live Production**: [https://vox-club.vercel.app/](https://vox-club.vercel.app/)  
 > **Format**: World Schools Debate & Model United Nations (MUN)  
-> **Status**: Release v1.0 — Production Ready
+> **Status**: Release v1.1 — Production Ready (Milestone v1.1)
 
 ---
 
 ## 🇷🇺 О проекте (Russian)
 
-**VOX Debate Club Platform** — интерактивная веб-платформа для школьного дебатного клуба, объединяющая форматы World Schools Debate и Модель ООН (MUN). Платформа разработана в эстетике Dark SaaS с акцентом на высокую интерактивность, доступность и мгновенный отклик без тяжелых фреймворков.
+**VOX Debate Club Platform** — интерактивная веб-платформа для школьного дебатного клуба, объединяющая форматы World Schools Debate и Модель ООН (MUN). Платформа разработана в премиальной эстетике Dark SaaS с акцентом на высокую интерактивность, доступность и мгновенный отклик без тяжелых фреймворков.
 
 ### ✨ Ключевые возможности
 
@@ -19,6 +19,7 @@
      - **E** (Evidence) — Факты и статистика
      - **O** (Outcome) — Влияние и вывод
    - Банк из **7 проработанных кейсов** с мгновенной проверкой логической связки и анимацией обратной связи.
+   - **Click-Swap & Сетка 2х2**: рокировка аргументов между слотами в 2 клика и ультракомпактная мобильная сетка.
 2. **Турнирный дебатный таймер**:
    - Пресеты: 4 мин (подготовка), 5 мин (речь новичка), 8 мин (официальный регламент WSDC).
    - Индикация защищенных минут (запрет реплик с места — POI) и звуковые сигналы гонга на Web Audio API.
@@ -27,12 +28,15 @@
    - Фильтрация по категориям и кнопка быстрой генерации случайной темы.
 4. **Дорожная карта на 10 недель**:
    - Структурированный трек развития в 3 этапа (*Базовые навыки*, *Турнирные дебаты*, *Модель ООН & Дипломатия*).
-   - Динамический бейдж открытого набора и фокус на текущей неделе.
+   - **Нативная мобильная свайп-карусель (CSS Scroll Snap)** для комфортного просмотра недель без бесконечного вертикального скролла.
+   - Динамический бейдж круглогодичного открытого набора и фокус на текущей неделе.
    - Минималистичный таймлайн занятия: **15'** (Теория) → **20'** (Подготовка) → **40'** (Раунд) → **15'** (Судейский разбор).
 5. **Шпаргалки и проверенные первоисточники**:
-   - Копируемые шаблоны речей и резолюций ООН в один клик.
-   - Прямые ссылки на официальные руководства ООН, Best Delegate, Stanford Encyclopedia of Philosophy.
-6. **Защищенная форма записи**:
+   - Быстрые шпаргалки дебатёра с мобильной свайп-каруселью и копированием в буфер обмена в один клик.
+   - Компактная мобильная сетка 2х2 для ссылок на официальные руководства ООН, Best Delegate, Атлас софизмов и SEP.
+6. **Бренд и строгий Hero-дизайн**:
+   - Фирменная парящая круглая эмблема клуба VOX KAIS с мягким неоновым ореолом свечения, очищенная от псевдонаучного визуального шума.
+7. **Защищенная форма записи**:
    - Клиентская санитизация данных, встроенная ловушка ботов (Honeypot), защита от повторных кликов (`isSubmitting`) и `AbortController` с таймаутом 15 сек.
    - Прямая интеграция с Google Таблицами через Google Apps Script Web App.
 
@@ -44,11 +48,12 @@
 
 ### 🚀 Key Features
 
-* **AREO Argument Constructor**: Drag/click interactive trainer based on the AREO framework (Assertion, Reasoning, Evidence, Outcome) across 7 tournament-grade debate cases.
+* **AREO Argument Constructor**: Drag/click interactive trainer based on the AREO framework (Assertion, Reasoning, Evidence, Outcome) across 7 tournament-grade debate cases, featuring 2-click slot swapping (Click-Swap) and compact mobile 2x2 grid.
 * **Debate Round Timer**: Built-in 4/5/8-minute speech timer with Point of Information (POI) protected minute logic and Web Audio synth bell sounds.
 * **Motions & Resolutions Generator**: Database of 32 curated motions across 4 categories with smooth filtering.
-* **10-Week Cohort Curriculum**: 3-stage semester track with active week indicators and a 4-step debate meeting workflow (15' 20' 40' 15').
-* **Cheat Sheets & Primary Sources**: One-click clipboard copy for speech templates and curated verified links (UN MUN Guide, Best Delegate, Fallacy Guides, SEP).
+* **10-Week Cohort Curriculum**: 3-stage semester track with mobile CSS Scroll Snap swipe carousel, rolling admission status, and a 4-step debate meeting workflow (15' 20' 40' 15').
+* **Cheat Sheets & Primary Sources**: Mobile horizontal swipe carousel, one-click clipboard copy for speech rules, and compact 2x2 resource tiles (UN MUN Guide, Best Delegate, Fallacy Guides, SEP).
+* **Refined Hero & Brand Identity**: Floating glowing circular VOX KAIS emblem with dual drop-shadow aura, free of clutter and AI-generated noise.
 * **Anti-Abuse Registration Form**: Honeypot bot protection, debounce submission guards, string sanitization, network timeouts, and asynchronous Google Apps Script dispatch.
 
 ---
@@ -121,6 +126,21 @@ python -m http.server 3000
 4. Output Directory: *оставить пустым*
 
 При каждом пуше в ветку `main` Vercel автоматически разворачивает актуальную версию на [vox-club.vercel.app](https://vox-club.vercel.app/).
+
+---
+
+## 📌 История релизов / Release Notes
+
+### v1.1 (02.10.2026) — Milestone: Mobile UX & Brand Refactor
+* **Нативные свайп-карусели (CSS Scroll Snap)**: горизонтальный свайп для дорожной карты программы (10 недель) и базы быстрых шпаргалок с скрытием полос прокрутки.
+* **AREO-тренажер v1.1**: компактная мобильная сетка 2х2 и интерактивная рокировка аргументов в 2 клика (Click-Swap).
+* **Мобильное меню**: изолирующий полноэкранный оверлей с `z-index: 9999` и `backdrop-filter: blur(24px)`.
+* **Бренд и Hero**: парящая круглая эмблема клуба VOX KAIS с неоновым контуром, полное удаление визуального AI-слопа.
+* **Контент**: карточка уровня английского (ENG A2-B1+ Note Card) и круглогодичный открытый набор.
+* **Первоисточники**: компактная сетка 2x2 на смартфонах.
+
+### v1.0 (01.10.2026) — Initial Production Release
+* Первичный публичный релиз платформы, 4 SPA-экрана, AREO-тренажер, таймер раундов, генератор тем, форма записи в Google Таблицы.
 
 ---
 
