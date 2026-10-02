@@ -65,30 +65,153 @@
           <div class="orb orb--3"></div>
         </div>
         <div class="container hero-content">
-          <div class="hero-badge reveal" aria-label="World Schools Format">
-            <span class="badge-dot"></span>
-            World Schools Debate
-          </div>
-          <h1 class="hero-title reveal" id="hero-title">
-            Твой голос &mdash;<br />
-            <span class="gradient-text">твоя сила</span>
-          </h1>
-          <p class="hero-subtitle reveal">
-            VOX &mdash; место, где школьники учатся думать критически,
-            аргументировать убедительно и побеждать в дебатах
-            международного формата.
-          </p>
-          <div class="hero-actions reveal">
-            <a href="#register" class="btn btn-primary btn-lg" data-route="register">
-              <span>Вступить в клуб</span>
-              <svg class="btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </a>
-            <a href="#program" class="btn btn-ghost btn-lg" data-route="program">Узнать больше</a>
-          </div>
+          <div class="hero-grid">
+            <div class="hero-text-col">
+              <div class="hero-badge reveal" aria-label="World Schools Format">
+                <span class="badge-dot"></span>
+                World Schools Debate
+              </div>
+              <h1 class="hero-title reveal" id="hero-title">
+                Твой голос &mdash;<br />
+                <span class="gradient-text">твоя сила</span>
+              </h1>
+              <p class="hero-subtitle reveal">
+                VOX &mdash; место, где школьники учатся думать критически,
+                аргументировать убедительно и побеждать в дебатах
+                международного формата.
+              </p>
+              <div class="hero-actions reveal">
+                <a href="#register" class="btn btn-primary btn-lg" data-route="register">
+                  <span>Вступить в клуб</span>
+                  <svg class="btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </a>
+                <a href="#program" class="btn btn-ghost btn-lg" data-route="program">Узнать больше</a>
+              </div>
+            </div>
 
+            <!-- Stylized VOX Brand Emblem Column -->
+            <div class="hero-visual-col reveal" aria-hidden="true">
+              <div class="hero-brand-card">
+                <span class="hero-brand-badge-top">
+                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 2"/></svg>
+                  WSDC &bull; MUN
+                </span>
+                <div class="hero-brand-card__inner">
+                  <svg class="hero-brand-svg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <radialGradient id="voxHalo" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#6366f1" stop-opacity="0.22" />
+                        <stop offset="50%" stop-color="#4f46e5" stop-opacity="0.06" />
+                        <stop offset="100%" stop-color="#08090d" stop-opacity="0" />
+                      </radialGradient>
+
+                      <linearGradient id="vFacetLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#ffffff" />
+                        <stop offset="50%" stop-color="#e2e8f0" />
+                        <stop offset="100%" stop-color="#94a3b8" />
+                      </linearGradient>
+
+                      <linearGradient id="vFacetRight" x1="100%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#f8fafc" />
+                        <stop offset="50%" stop-color="#cbd5e1" />
+                        <stop offset="100%" stop-color="#64748b" />
+                      </linearGradient>
+
+                      <linearGradient id="vInner" x1="50%" y1="0%" x2="50%" y2="100%">
+                        <stop offset="0%" stop-color="#6366f1" stop-opacity="0.9" />
+                        <stop offset="100%" stop-color="#1e1b4b" stop-opacity="0.95" />
+                      </linearGradient>
+
+                      <linearGradient id="oRingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+                        <stop offset="40%" stop-color="#a5b4fc" stop-opacity="0.8" />
+                        <stop offset="100%" stop-color="#4f46e5" stop-opacity="0.4" />
+                      </linearGradient>
+
+                      <linearGradient id="waveGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+                        <stop offset="0%" stop-color="#4338ca" />
+                        <stop offset="70%" stop-color="#818cf8" />
+                        <stop offset="100%" stop-color="#ffffff" />
+                      </linearGradient>
+
+                      <linearGradient id="xFacet" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+                        <stop offset="100%" stop-color="#64748b" stop-opacity="0.4" />
+                      </linearGradient>
+                    </defs>
+
+                    <!-- Background Halo & Concentric Grid -->
+                    <circle cx="200" cy="200" r="175" fill="url(#voxHalo)" />
+                    <circle cx="200" cy="200" r="165" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1" stroke-dasharray="3 6" />
+                    <circle cx="200" cy="200" r="132" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+                    <circle cx="200" cy="200" r="92" stroke="rgba(99, 102, 241, 0.2)" stroke-width="1" stroke-dasharray="4 4" />
+
+                    <!-- Cardinal Crosshairs & Precision Ticks -->
+                    <line x1="200" y1="20" x2="200" y2="40" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.5" />
+                    <line x1="200" y1="360" x2="200" y2="380" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.5" />
+                    <line x1="20" y1="200" x2="40" y2="200" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.5" />
+                    <line x1="360" y1="200" x2="380" y2="200" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.5" />
+
+                    <circle cx="200" cy="35" r="2.5" fill="#6366f1" />
+                    <circle cx="365" cy="200" r="2.5" fill="#6366f1" />
+                    <circle cx="200" cy="365" r="2.5" fill="#6366f1" />
+                    <circle cx="35" cy="200" r="2.5" fill="#6366f1" />
+
+                    <!-- Corner Technical Marks -->
+                    <path d="M 70 85 L 85 85 M 70 85 L 70 100" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M 330 85 L 315 85 M 330 85 L 330 100" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M 70 315 L 85 315 M 70 315 L 70 300" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M 330 315 L 315 315 M 330 315 L 330 300" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-linecap="round"/>
+
+                    <!-- Resonance Audio Spectrum Bars -->
+                    <g opacity="0.65">
+                      <line x1="140" y1="250" x2="140" y2="270" stroke="url(#waveGrad)" stroke-width="3" stroke-linecap="round" />
+                      <line x1="155" y1="242" x2="155" y2="278" stroke="url(#waveGrad)" stroke-width="3" stroke-linecap="round" />
+                      <line x1="170" y1="232" x2="170" y2="288" stroke="url(#waveGrad)" stroke-width="3" stroke-linecap="round" />
+                      <line x1="185" y1="225" x2="185" y2="295" stroke="url(#waveGrad)" stroke-width="3" stroke-linecap="round" />
+                      <line x1="200" y1="220" x2="200" y2="300" stroke="url(#waveGrad)" stroke-width="3.5" stroke-linecap="round" />
+                      <line x1="215" y1="225" x2="215" y2="295" stroke="url(#waveGrad)" stroke-width="3" stroke-linecap="round" />
+                      <line x1="230" y1="232" x2="230" y2="288" stroke="url(#waveGrad)" stroke-width="3" stroke-linecap="round" />
+                      <line x1="245" y1="242" x2="245" y2="278" stroke="url(#waveGrad)" stroke-width="3" stroke-linecap="round" />
+                      <line x1="260" y1="250" x2="260" y2="270" stroke="url(#waveGrad)" stroke-width="3" stroke-linecap="round" />
+                    </g>
+
+                    <!-- Inner Core Facet -->
+                    <path d="M 200 248 L 168 135 L 232 135 Z" fill="url(#vInner)" />
+
+                    <!-- Dynamic Intersecting Sound Ring (O) -->
+                    <circle cx="200" cy="180" r="48" stroke="url(#oRingGrad)" stroke-width="9" fill="none" stroke-linecap="round" />
+                    <circle cx="200" cy="180" r="32" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.5" fill="none" />
+
+                    <!-- Sculpted Monogram Wings (V & X) -->
+                    <path d="M 120 115 L 165 115 L 200 238 L 176 238 Z" fill="url(#vFacetLeft)" filter="drop-shadow(0 4px 8px rgba(0,0,0,0.5))" />
+                    <path d="M 280 115 L 235 115 L 200 238 L 224 238 Z" fill="url(#vFacetRight)" filter="drop-shadow(0 4px 8px rgba(0,0,0,0.5))" />
+
+                    <!-- Center Spine Highlight Edge -->
+                    <line x1="200" y1="115" x2="200" y2="240" stroke="rgba(255, 255, 255, 0.4)" stroke-width="1.5" stroke-linecap="round" />
+
+                    <!-- Diagonal X Stabilizer Wings -->
+                    <path d="M 148 215 L 168 195 L 244 265 L 224 285 Z" fill="url(#xFacet)" opacity="0.85" />
+                    <path d="M 252 215 L 232 195 L 156 265 L 176 285 Z" fill="url(#xFacet)" opacity="0.85" />
+
+                    <!-- Center Apex Diamond -->
+                    <polygon points="200,230 207,240 200,250 193,240" fill="#ffffff" />
+
+                    <!-- Typographic Brand Accents -->
+                    <text x="200" y="75" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" letter-spacing="0.32em" fill="#f8fafc">VOX</text>
+                    <text x="200" y="345" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" letter-spacing="0.24em" fill="#94a3b8">VERITAS &bull; RHETORICA</text>
+                  </svg>
+                </div>
+                <span class="hero-brand-badge-bottom">
+                  <span class="badge-dot" style="background:#6366f1;"></span>
+                  ORATORY &bull; AREO
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="hero-scroll-hint" aria-hidden="true">
           <span>Прокрути вниз</span>
@@ -254,7 +377,7 @@
         <div class="container cta-band-inner">
           <div class="cta-band-text">
             <h2 class="cta-band-title" id="cta-title">Готов найти свой голос?</h2>
-            <p class="cta-band-subtitle">Новый набор открыт. Мест ограниченное количество.</p>
+            <p class="cta-band-subtitle">Набор открыт круглый год. Присоединяйся на ближайшую встречу клуба.</p>
           </div>
           <div class="cta-band-actions">
             <a href="#register" class="btn btn-primary btn-lg" data-route="register">Записаться сейчас</a>
@@ -285,15 +408,17 @@
           <div class="lang-barrier-banner reveal" role="region" aria-label="Информация об уровне английского">
             <div class="lang-barrier-badge-wrap">
               <span class="lang-barrier-pill">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M8 1.5C4.41 1.5 1.5 4.19 1.5 7.5c0 1.54.63 2.95 1.68 4.02-.15.82-.48 1.83-1.12 2.57a.5.5 0 00.44.82c1.78-.07 3.09-.76 3.86-1.32.51.15 1.06.23 1.64.23 3.59 0 6.5-2.69 6.5-6s-2.91-6-6.5-6z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
                 </svg>
-                English A2–B1+
+                ENG &bull; A2&ndash;B1+
               </span>
             </div>
             <div class="lang-barrier-content">
               <p class="lang-barrier-quote">
-                <strong>Не бойся говорить:</strong> мы ждем участников с любым уровнем английского (от A2&ndash;B1). Главное &mdash; желание думать и спорить, разговорный навык подтянется на практике.
+                <strong>Языковой барьер &mdash; не помеха.</strong> Главное &mdash; логика аргументов. Разговорный английский и дебатный вокабуляр раскачиваются прямо в раундах.
               </p>
             </div>
           </div>
@@ -410,7 +535,7 @@
               <span class="section-tag">Дорожная карта на 10 недель</span>
               <div class="open-enrollment-badge">
                 <span class="pulse-dot-green" aria-hidden="true"></span>
-                <span>Открытый набор &middot; Присоединяйся в любой вторник</span>
+                <span>Набор открыт круглый год &middot; Присоединяйся на ближайшую встречу клуба</span>
               </div>
             </div>
             <h2 class="section-title" id="prog-roadmap-title">Программа семестра</h2>
@@ -701,7 +826,7 @@
         <div class="container cta-band-inner">
           <div class="cta-band-text">
             <h2 class="cta-band-title" id="prog-cta-title">Хочешь пройти программу?</h2>
-            <p class="cta-band-subtitle">Запишись сейчас &mdash; следующий поток стартует скоро.</p>
+            <p class="cta-band-subtitle">Набор открыт круглый год. Присоединяйся на ближайшую встречу клуба.</p>
           </div>
           <div class="cta-band-actions">
             <a href="#register" class="btn btn-primary btn-lg" data-route="register">Записаться</a>

@@ -239,27 +239,19 @@
 
 /* ---- Language Barrier Relief Callout ---- */
 .lang-barrier-banner {
-  background: linear-gradient(135deg, rgba(124, 92, 252, 0.08) 0%, rgba(52, 211, 153, 0.06) 100%);
-  border: 1px solid rgba(124, 92, 252, 0.22);
-  border-radius: var(--radius-lg);
-  padding: var(--space-5) var(--space-7);
+  background: rgba(14, 15, 22, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 16px 20px;
   margin-bottom: var(--space-8);
   display: flex;
   align-items: center;
-  gap: var(--space-6);
+  gap: var(--space-5);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.lang-barrier-banner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(to bottom, var(--color-accent), var(--color-success));
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .lang-barrier-badge-wrap {
@@ -269,17 +261,21 @@
 .lang-barrier-pill {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-2);
-  background: rgba(52, 211, 153, 0.12);
-  border: 1px solid rgba(52, 211, 153, 0.3);
-  color: var(--color-success);
-  font-size: var(--text-xs);
+  gap: 8px;
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  color: #c7d2fe;
+  font-size: 0.75rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding: var(--space-1) var(--space-3);
-  border-radius: var(--radius-full);
+  letter-spacing: 0.04em;
+  padding: 6px 12px;
+  border-radius: 8px;
   white-space: nowrap;
+}
+
+.lang-barrier-pill svg {
+  color: #818cf8;
+  flex-shrink: 0;
 }
 
 .lang-barrier-content {
@@ -287,23 +283,25 @@
 }
 
 .lang-barrier-quote {
-  font-size: var(--text-sm);
+  font-size: 0.9rem;
   color: var(--color-text-2);
-  line-height: 1.65;
+  line-height: 1.55;
   margin: 0;
 }
 
 .lang-barrier-quote strong {
-  color: var(--color-text);
-  font-weight: 600;
+  color: #f8fafc;
+  font-weight: 700;
+  margin-right: 4px;
 }
 
 @media (max-width: 768px) {
   .lang-barrier-banner {
     flex-direction: column;
     align-items: flex-start;
-    gap: var(--space-3);
-    padding: var(--space-5) var(--space-5);
+    gap: 10px;
+    padding: 14px 16px;
+    border-radius: 10px;
   }
 }
 
@@ -540,14 +538,14 @@
 }
 
 .pulse-dot-green {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background-color: #22c55e;
+  background-color: #10b981;
   position: relative;
   display: inline-block;
   flex-shrink: 0;
-  box-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25);
 }
 
 .pulse-dot-green::after {
@@ -555,8 +553,8 @@
   position: absolute;
   inset: -3px;
   border-radius: 50%;
-  border: 1.5px solid rgba(34, 197, 94, 0.75);
-  animation: pulse-ring-green 2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  animation: pulse-ring-green 2.4s cubic-bezier(0.24, 0, 0.38, 1) infinite;
 }
 
 @keyframes pulse-ring-green {
@@ -959,13 +957,28 @@
     font-size: var(--text-xl);
   }
 
-  .roadmap-weeks-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-4);
+  /* Program Weeks: horizontal snap-carousel on mobile */
+  .roadmap-weeks-grid,
+  .roadmap-weeks-grid--pair {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px;
+    padding-bottom: 16px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
 
-  .roadmap-weeks-grid--pair {
-    grid-template-columns: 1fr;
+  .roadmap-weeks-grid::-webkit-scrollbar,
+  .roadmap-weeks-grid--pair::-webkit-scrollbar {
+    display: none;
+  }
+
+  .roadmap-week-card {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+    box-sizing: border-box;
   }
 
   .prog-timeline-row {
