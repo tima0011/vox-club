@@ -60,76 +60,51 @@
   transition-delay: 200ms;
 }
 
-/* Brand Card */
+/* Brand Card — Clean Minimalist Apple/Linear Style */
 .hero-brand-card {
   width: 100%;
-  max-width: 440px;
-  background: rgba(14, 15, 22, 0.65);
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-2xl);
-  padding: var(--space-6);
-  position: relative;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
-}
-
-.hero-brand-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(99, 102, 241, 0.3);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5), 0 0 24px rgba(99, 102, 241, 0.12);
-}
-
-.hero-brand-card__inner {
-  position: relative;
+  border-radius: 20px;
+  padding: 40px 32px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 20px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
 }
 
-.hero-brand-svg {
+.hero-brand-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
+}
+
+.hero-brand-logo-wrap {
+  width: 100%;
+  max-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-brand-logo {
   width: 100%;
   height: auto;
-  max-height: 400px;
   display: block;
 }
 
-.hero-brand-badge-top {
-  position: absolute;
-  top: -12px;
-  right: 20px;
-  background: #08090d;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: var(--radius-full);
-  padding: 4px 12px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: #cbd5e1;
-  letter-spacing: 0.04em;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-.hero-brand-badge-bottom {
-  position: absolute;
-  bottom: -12px;
-  left: 20px;
-  background: #08090d;
-  border: 1px solid rgba(99, 102, 241, 0.3);
-  border-radius: var(--radius-full);
-  padding: 4px 12px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: #c7d2fe;
-  letter-spacing: 0.04em;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+.hero-brand-caption {
+  font-size: 13px;
+  color: var(--color-text-3);
+  text-align: center;
+  margin: 0;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  line-height: 1.4;
 }
 
 /* Badge */
@@ -275,12 +250,11 @@
   }
 
   .hero-brand-card {
-    padding: var(--space-4);
-    border-radius: var(--radius-xl);
+    padding: 28px 20px 24px;
+    border-radius: 16px;
   }
 
-  .hero-brand-badge-top,
-  .hero-brand-badge-bottom {
-    display: none;
+  .hero-brand-logo-wrap {
+    max-width: 210px;
   }
 }
