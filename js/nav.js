@@ -54,6 +54,17 @@
           document.body.style.overflow = '';
         }
       });
+
+      /* Close on social link click (opens in new tab) */
+      var socialLinks = mobileMenu.querySelectorAll('.mobile-menu-social-btn');
+      socialLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+          burger.setAttribute('aria-expanded', 'false');
+          burger.setAttribute('aria-label', 'Открыть меню');
+          mobileMenu.setAttribute('hidden', '');
+          document.body.style.overflow = '';
+        });
+      });
     }
   });
 })();

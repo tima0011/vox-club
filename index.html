@@ -47,9 +47,25 @@
         <li><a href="#home" class="mobile-nav-link" data-route="home">Главная</a></li>
         <li><a href="#program" class="mobile-nav-link" data-route="program">Программа</a></li>
         <li><a href="#materials" class="mobile-nav-link" data-route="materials">Материалы</a></li>
-        <li><a href="#register" class="mobile-nav-link" data-route="register">Вступить</a></li>
       </ul>
-      <a href="#register" class="btn btn-primary mobile-cta" data-route="register">Записаться в клуб</a>
+      <div class="mobile-menu-footer">
+        <a href="#register" class="btn btn-primary mobile-cta" data-route="register">Записаться в клуб</a>
+        <div class="mobile-menu-socials" aria-label="VOX в соцсетях">
+          <a href="https://chat.whatsapp.com/GBofOS0cc4C34fjCzjXCld" class="mobile-menu-social-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp чат">
+            <svg class="mobile-menu-social-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 1.954.562 3.778 1.535 5.323L2 22l4.81-1.503A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.2a8.16 8.16 0 0 1-4.225-1.175l-.303-.18-2.854.892.907-2.775-.197-.314A8.175 8.175 0 0 1 3.8 12c0-4.529 3.671-8.2 8.2-8.2s8.2 3.671 8.2 8.2-3.671 8.2-8.2 8.2z"/>
+              <path d="M17.472 14.382c-.301-.15-1.782-.879-2.058-.979-.276-.1-.476-.15-.676.15-.2.301-.776.979-.951 1.179-.175.2-.351.226-.652.075-.301-.15-1.272-.469-2.423-1.496-.896-.799-1.5-1.786-1.676-2.087-.175-.301-.019-.464.131-.614.136-.135.301-.351.452-.526.15-.175.2-.301.301-.502.1-.2.05-.376-.025-.526-.075-.15-.676-1.63-.927-2.234-.244-.588-.492-.508-.676-.517l-.577-.01c-.2 0-.526.075-.802.376-.276.301-1.053 1.028-1.053 2.508 0 1.48 1.078 2.909 1.229 3.11.15.2 2.122 3.24 5.141 4.544.718.31 1.279.496 1.716.635.722.23 1.379.197 1.9-.12.58-.352 1.782-1.73 2.033-2.408.251-.678.251-1.258.176-1.383-.075-.125-.276-.2-.577-.35z"/>
+            </svg>
+            <span>WhatsApp</span>
+          </a>
+          <a href="https://t.me/voxdebateclub" class="mobile-menu-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Telegram канал">
+            <svg class="mobile-menu-social-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+            </svg>
+            <span>Telegram</span>
+          </a>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -117,7 +133,7 @@
             <p class="section-subtitle">Мы построили клуб так, чтобы каждый участник рос &mdash; не наблюдал со стороны.
             </p>
           </div>
-          <div class="cards-grid cards-grid--3 reveal-stagger">
+          <div class="cards-grid cards-grid--3 why-vox-grid reveal-stagger">
             <article class="card card--feature" id="card-involvement">
               <div class="card-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                   <circle cx="14" cy="10" r="4" stroke="currentColor" stroke-width="1.5" />
@@ -272,6 +288,37 @@
           <div class="cta-band-actions">
             <a href="#register" class="btn btn-primary btn-lg" data-route="register">Записаться сейчас</a>
             <a href="#program" class="btn btn-outline btn-lg" data-route="program">Посмотреть программу</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Community Section: Всегда на связи -->
+      <section class="section home-community-section reveal" aria-labelledby="home-community-title">
+        <div class="container">
+          <div class="home-community-card">
+            <div class="home-community-badge">
+              <span class="badge-dot"></span>
+              <span>Сообщество VOX</span>
+            </div>
+            <h2 class="section-title home-community-title" id="home-community-title">Всегда на связи</h2>
+            <p class="section-subtitle home-community-subtitle">
+              Публикуем темы дебатов, расписание раундов и материалы в наших каналах
+            </p>
+            <div class="home-community-actions">
+              <a href="https://chat.whatsapp.com/GBofOS0cc4C34fjCzjXCld" class="btn btn-community btn-community--wa" target="_blank" rel="noopener noreferrer">
+                <svg class="btn-community-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 1.954.562 3.778 1.535 5.323L2 22l4.81-1.503A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.2a8.16 8.16 0 0 1-4.225-1.175l-.303-.18-2.854.892.907-2.775-.197-.314A8.175 8.175 0 0 1 3.8 12c0-4.529 3.671-8.2 8.2-8.2s8.2 3.671 8.2 8.2-3.671 8.2-8.2 8.2z"/>
+                  <path d="M17.472 14.382c-.301-.15-1.782-.879-2.058-.979-.276-.1-.476-.15-.676.15-.2.301-.776.979-.951 1.179-.175.2-.351.226-.652.075-.301-.15-1.272-.469-2.423-1.496-.896-.799-1.5-1.786-1.676-2.087-.175-.301-.019-.464.131-.614.136-.135.301-.351.452-.526.15-.175.2-.301.301-.502.1-.2.05-.376-.025-.526-.075-.15-.676-1.63-.927-2.234-.244-.588-.492-.508-.676-.517l-.577-.01c-.2 0-.526.075-.802.376-.276.301-1.053 1.028-1.053 2.508 0 1.48 1.078 2.909 1.229 3.11.15.2 2.122 3.24 5.141 4.544.718.31 1.279.496 1.716.635.722.23 1.379.197 1.9-.12.58-.352 1.782-1.73 2.033-2.408.251-.678.251-1.258.176-1.383-.075-.125-.276-.2-.577-.35z"/>
+                </svg>
+                <span>Чат в WhatsApp</span>
+              </a>
+              <a href="https://t.me/voxdebateclub" class="btn btn-community btn-community--tg" target="_blank" rel="noopener noreferrer">
+                <svg class="btn-community-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+                </svg>
+                <span>Канал в Telegram</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -1426,18 +1473,33 @@
                   </div>
                 </form>
 
-                <!-- Success message -->
+                <!-- Success card -->
                 <div class="form-success" id="form-success" hidden>
                   <div class="form-success-icon" aria-hidden="true">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                      <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8" />
-                      <path d="M8 12l3 3 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                      <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                      <path d="M8 12l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                   </div>
-                  <div class="form-success-text">
-                    <h4 class="form-success-title">Заявка принята! Скоро напишем тебе в Telegram 🎉</h4>
-                    <p class="form-success-desc">Мы свяжемся с тобой в течение дня с деталями ближайшей встречи и приглашением в чат клуба.</p>
-                    <button type="button" class="btn btn-ghost btn-sm" id="form-reset-btn" style="margin-top: var(--space-4); align-self: flex-start;">
+                  <div class="form-success-content">
+                    <h3 class="form-success-title">Ты в команде!</h3>
+                    <p class="form-success-desc">Чтобы не потерять кабинет и время первой встречи, залетай в чат участников:</p>
+                    <div class="form-success-actions">
+                      <a href="https://chat.whatsapp.com/GBofOS0cc4C34fjCzjXCld" class="btn btn-community btn-community--wa" target="_blank" rel="noopener noreferrer">
+                        <svg class="btn-community-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 1.954.562 3.778 1.535 5.323L2 22l4.81-1.503A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.2a8.16 8.16 0 0 1-4.225-1.175l-.303-.18-2.854.892.907-2.775-.197-.314A8.175 8.175 0 0 1 3.8 12c0-4.529 3.671-8.2 8.2-8.2s8.2 3.671 8.2 8.2-3.671 8.2-8.2 8.2z"/>
+                          <path d="M17.472 14.382c-.301-.15-1.782-.879-2.058-.979-.276-.1-.476-.15-.676.15-.2.301-.776.979-.951 1.179-.175.2-.351.226-.652.075-.301-.15-1.272-.469-2.423-1.496-.896-.799-1.5-1.786-1.676-2.087-.175-.301-.019-.464.131-.614.136-.135.301-.351.452-.526.15-.175.2-.301.301-.502.1-.2.05-.376-.025-.526-.075-.15-.676-1.63-.927-2.234-.244-.588-.492-.508-.676-.517l-.577-.01c-.2 0-.526.075-.802.376-.276.301-1.053 1.028-1.053 2.508 0 1.48 1.078 2.909 1.229 3.11.15.2 2.122 3.24 5.141 4.544.718.31 1.279.496 1.716.635.722.23 1.379.197 1.9-.12.58-.352 1.782-1.73 2.033-2.408.251-.678.251-1.258.176-1.383-.075-.125-.276-.2-.577-.35z"/>
+                        </svg>
+                        <span>Чат в WhatsApp</span>
+                      </a>
+                      <a href="https://t.me/voxdebateclub" class="btn btn-community btn-community--tg" target="_blank" rel="noopener noreferrer">
+                        <svg class="btn-community-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+                        </svg>
+                        <span>Канал в Telegram</span>
+                      </a>
+                    </div>
+                    <button type="button" class="btn btn-ghost btn-sm form-reset-btn" id="form-reset-btn">
                       Отправить ещё одну заявку
                     </button>
                   </div>
