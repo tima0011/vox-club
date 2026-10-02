@@ -3151,8 +3151,53 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* Cheatsheets Base: horizontal swipe-carousel on mobile */
+  .cheats-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px;
+    padding-bottom: 16px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .cheats-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cheat-card {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+  }
+
+  /* Knowledge Base and Sources: compact 2x2 grid on mobile */
   .mat-resources-grid {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .resource-card {
+    padding: 10px 12px;
+  }
+
+  .resource-card__title {
+    font-size: 0.88rem;
+    margin-bottom: 4px;
+  }
+
+  .resource-card__desc {
+    font-size: 0.72rem;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+
+  .resource-card__badge {
+    padding: 2px 6px;
+    font-size: 0.62rem;
   }
 }
 

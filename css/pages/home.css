@@ -85,16 +85,19 @@
 
 .hero-brand-logo-wrap {
   width: 100%;
-  max-width: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.hero-brand-logo {
-  width: 100%;
+.hero-brand-logo-img {
+  width: 190px;
+  max-width: 100%;
   height: auto;
   display: block;
+  mix-blend-mode: screen;
+  border-radius: 12px;
+  object-fit: contain;
 }
 
 .hero-brand-caption {
@@ -254,7 +257,7 @@
     border-radius: 16px;
   }
 
-  .hero-brand-logo-wrap {
-    max-width: 210px;
+  .hero-brand-logo-img {
+    width: 160px;
   }
 }
