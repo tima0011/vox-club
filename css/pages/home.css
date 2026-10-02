@@ -264,7 +264,7 @@
 
 /* ── HOME COMMUNITY SECTION ("Всегда на связи") ── */
 .home-community-section {
-  padding: var(--space-16) 0 var(--space-20);
+  padding: 0;
   position: relative;
 }
 
@@ -273,25 +273,10 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: var(--space-14) var(--space-8);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.025) 0%, rgba(255, 255, 255, 0.01) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-2xl);
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
-}
-
-.home-community-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.4), transparent);
-  pointer-events: none;
+  padding: 32px 0 16px 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .home-community-badge {
@@ -307,110 +292,150 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-full);
   padding: var(--space-1) var(--space-4);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-3);
 }
 
 .home-community-title {
   margin: 0;
   color: var(--color-text);
-  font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl));
+  font-size: clamp(var(--text-2xl), 3.5vw, var(--text-3xl));
 }
 
 .home-community-subtitle {
-  margin-top: var(--space-3);
-  margin-bottom: var(--space-8);
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-6);
   max-width: 50ch;
   color: var(--color-text-2);
   font-size: var(--text-base);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .home-community-actions {
   display: flex;
-  gap: var(--space-4);
-  flex-wrap: wrap;
+  gap: 12px;
   justify-content: center;
   align-items: center;
 }
 
-[data-theme="light"] .home-community-card {
-  background: #ffffff;
-  border-color: #e2e8f0;
-  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
-}
-
-/* ── MOBILE HORIZONTAL SNAP-CAROUSELS (<768px) ── */
-@media (max-width: 768px) {
-  /* 1. Блок преимуществ ("Почему VOX") */
-  .why-vox-grid,
-  section[aria-labelledby="why-vox-title"] .cards-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    gap: 12px;
-    padding-bottom: 16px;
-    padding-left: 2px;
-    padding-right: 2px;
-    margin-top: var(--space-8);
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .why-vox-grid::-webkit-scrollbar,
-  section[aria-labelledby="why-vox-title"] .cards-grid::-webkit-scrollbar {
-    display: none;
-  }
-
-  .why-vox-grid > .card,
-  section[aria-labelledby="why-vox-title"] .cards-grid > .card {
-    flex: 0 0 85%;
-    scroll-snap-align: start;
-    box-sizing: border-box;
-  }
-
-  /* 2. Шаги ("Твой путь в VOX") */
-  #view-home .steps {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    gap: 12px;
-    padding-bottom: 16px;
-    padding-left: 2px;
-    padding-right: 2px;
-    margin-top: var(--space-8);
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  #view-home .steps::-webkit-scrollbar {
-    display: none;
-  }
-
-  #view-home .steps > .step {
-    flex: 0 0 85%;
-    scroll-snap-align: start;
-    box-sizing: border-box;
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    padding: var(--space-6);
-  }
-
-  /* Community block mobile layout */
-  .home-community-card {
-    padding: var(--space-8) var(--space-5);
-  }
-
+@media (max-width: 600px) {
   .home-community-actions {
     flex-direction: column;
     width: 100%;
-    gap: var(--space-3);
+    gap: 10px;
   }
 
   .home-community-actions .btn-community {
     width: 100%;
+  }
+}
+
+[data-theme="light"] .home-community-card {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* ── MOBILE BENTO-PYRAMID GRIDS (<768px) ── */
+@media (max-width: 768px) {
+  /* 1. Блок преимуществ ("Почему VOX") — Bento-пирамида: 1 сверху (span 2), 2 снизу (span 1) */
+  .why-vox-grid,
+  section[aria-labelledby="why-vox-title"] .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: var(--space-8);
+  }
+
+  .why-vox-grid > .card,
+  section[aria-labelledby="why-vox-title"] .cards-grid > .card {
+    padding: 16px 14px;
+    box-sizing: border-box;
+  }
+
+  .why-vox-grid > .card:nth-child(1),
+  section[aria-labelledby="why-vox-title"] .cards-grid > .card:nth-child(1) {
+    grid-column: span 2;
+  }
+
+  .why-vox-grid > .card:nth-child(2),
+  .why-vox-grid > .card:nth-child(3),
+  section[aria-labelledby="why-vox-title"] .cards-grid > .card:nth-child(2),
+  section[aria-labelledby="why-vox-title"] .cards-grid > .card:nth-child(3) {
+    grid-column: span 1;
+  }
+
+  .why-vox-grid .card-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .why-vox-grid .card-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .why-vox-grid .card-title {
+    font-size: var(--text-base);
+  }
+
+  .why-vox-grid .card-text {
+    font-size: var(--text-xs);
+    line-height: 1.45;
+  }
+
+  .why-vox-grid .card-list {
+    margin-top: var(--space-2);
+    gap: 4px;
+  }
+
+  .why-vox-grid .card-list li {
+    font-size: var(--text-xs);
+    padding-left: var(--space-4);
+  }
+
+  /* 2. Шаги ("Твой путь в VOX") — Bento-пирамида: 1 сверху (span 2), 2 снизу (span 1) */
+  #view-home .steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: var(--space-8);
+  }
+
+  #view-home .steps > .step {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 16px 14px;
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  #view-home .steps > .step:nth-child(1) {
+    grid-column: span 2;
+  }
+
+  #view-home .steps > .step:nth-child(2),
+  #view-home .steps > .step:nth-child(3) {
+    grid-column: span 1;
+  }
+
+  #view-home .steps > .step .step-number {
+    font-size: var(--text-3xl);
+    margin-bottom: 2px;
+  }
+
+  #view-home .steps > .step .step-title {
+    font-size: var(--text-base);
+  }
+
+  #view-home .steps > .step .step-text {
+    font-size: var(--text-xs);
+    line-height: 1.45;
+  }
+
+  /* Community block mobile layout */
+  .home-community-card {
+    padding: 24px 0 12px 0;
   }
 }
 
