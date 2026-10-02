@@ -60,27 +60,18 @@
   transition-delay: 200ms;
 }
 
-/* Brand Card — Clean Minimalist Apple/Linear Style */
+/* Brand Showcase — Floating Glowing Circular Emblem */
 .hero-brand-card {
   width: 100%;
   max-width: 400px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  padding: 40px 32px 32px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
-}
-
-.hero-brand-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.16);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
 }
 
 .hero-brand-logo-wrap {
@@ -91,20 +82,27 @@
 }
 
 .hero-brand-logo-img {
-  width: 190px;
+  width: 280px;
   max-width: 100%;
   height: auto;
+  aspect-ratio: 1 / 1;
   display: block;
-  mix-blend-mode: screen;
-  border-radius: 12px;
-  object-fit: contain;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: drop-shadow(0 0 25px rgba(99, 102, 241, 0.35)) drop-shadow(0 0 50px rgba(6, 182, 212, 0.2));
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+}
+
+.hero-brand-card:hover .hero-brand-logo-img {
+  transform: translateY(-4px) scale(1.02);
+  filter: drop-shadow(0 0 35px rgba(99, 102, 241, 0.5)) drop-shadow(0 0 65px rgba(6, 182, 212, 0.3));
 }
 
 .hero-brand-caption {
   font-size: 13px;
   color: var(--color-text-3);
   text-align: center;
-  margin: 0;
+  margin: 16px 0 0;
   letter-spacing: 0.02em;
   font-weight: 500;
   line-height: 1.4;
@@ -253,11 +251,13 @@
   }
 
   .hero-brand-card {
-    padding: 28px 20px 24px;
-    border-radius: 16px;
+    padding: 0;
+    border: none;
+    background: transparent;
   }
 
   .hero-brand-logo-img {
-    width: 160px;
+    width: 220px;
+    max-width: 75vw;
   }
 }
